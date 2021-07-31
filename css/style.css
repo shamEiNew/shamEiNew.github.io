@@ -1,7 +1,7 @@
 /* Styling for basic */
 
 html body{
-    background-color: #2E52A6;
+    background-color: #5379d1;
     text-align: left;
     font-family: "Nanum Gothic" serif; 
     font-size: 18px;
@@ -22,7 +22,7 @@ li a{
 }
 
 li a:hover{
-  color:rgb(60, 250, 43);
+  color:rgb(194, 56, 2);
   font-size: 0.9em;
 }
 h1{
@@ -37,44 +37,55 @@ p{
   }
   
   /* Create two equal columns that floats next to each other */
+@media (min-width: 992px) {
 .column1 {
     float:left;
     /* width: 50%; */
     padding: 1%;
     width: 33%;
-    height: fit-content; 
+    height: auto; 
     background-color:rgb(240, 174, 51);
     border: black;
     border-width: thick;
     border-style: groove;/* Should be removed. Only for demonstration */
   }
-  
-.column2 {
-    float: right;
-    padding: 1%;
-    width: 33%;
-    height:auto; 
-    background-color:rgb(186, 255, 83);
-    border: black;
-    border-width: thick;
-    border-style: groove;
+.row-quote{
+  float:right;
+  padding: 1%;
+  width: 34%;
+  height: fit-content; 
+  background-color:rgb(223, 216, 202);
+  border: black;
+  border-width: thick;
+  border-style: groove;
+  font-size: 0.8em;
   }
-
-  .grid-container {
-    display: inline-grid;
-  }
-
-.column3{
-  float: right;
+.column2{
+  float: left;
   padding: 1%;
   width: 34%;
   height:auto; 
-  background-color:rgb(79, 165, 245);
+  background-color:rgb(186, 255, 83);
   border: black;
   border-width:thick;
   border-style: groove;
 }
+  
+.column3 {
+    float: right;
+    padding: 1%;
+    width: 33%;
+    height:auto; 
+    background-color:rgb(79, 165, 245);
+    border: black;
+    border-width: thick;
+    border-style: groove;
+  }
+}
 
+.grid-container {
+  display: inline-grid;
+}
 .row1{
   float:right;
   align-self: center;
