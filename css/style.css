@@ -50,9 +50,9 @@ p{
     border-style: groove;/* Should be removed. Only for demonstration */
   }
 .row-quote{
-  float:right;
+  float:left;
   padding: 1%;
-  width: 34%;
+  width: 33%;
   height: fit-content; 
   background-color:rgb(223, 216, 202);
   border: black;
