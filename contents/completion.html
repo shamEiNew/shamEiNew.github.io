@@ -1,0 +1,509 @@
+<p>
+
+    <b>1. Introduction </b>
+    
+    </p><p>
+    
+    
+    </p><p>
+    
+    </p><p>
+    Completeness is one of the significant properties in analysis associated with metric spaces, so we studied its relation to Heine-Borel theorem and also invested some time in studying the polynomial space ($latex {P([a,b])}&amp;fg=000000$) and noted that the completion of the polynomial space is space of continuous functions ($latex {C([a,b])}&amp;fg=000000$). While dealing with space of continuous functions, Weierstrass approximation theorem was proved naturally and then we looked at a more general result, i.e., the Stone-Weierstrass approximation theorem which we proved for compact subsets of $latex {\mathbb{R}}&amp;fg=000000$.
+    </p><p>
+    
+    </p><p>
+    
+    <b>2. Weierstrass Construction </b>
+    
+    </p><p>
+    
+    
+    </p><p>
+    
+    </p><p>
+    A sequence $latex {\{x_n\}}&amp;fg=000000$ of rational numbers is said to converge to a point $latex {x}&amp;fg=000000$, if for every $latex {P &gt;0}&amp;fg=000000$ in $latex {\mathbb{N}}&amp;fg=000000$, however large there exist a natural number $latex {n_0}&amp;fg=000000$ such that </p><p align="center">$latex \displaystyle |x_n-x| &lt; \frac{1}{P}&amp;fg=000000$</p>
+     for all $latex { n \geq n_0}&amp;fg=000000$ 
+    <p>
+     A sequence $latex {\{x_n\}}&amp;fg=000000$ of rational numbers is said to Cauchy if for every $latex {P &gt;0}&amp;fg=000000$ in $latex {\mathbb{N}}&amp;fg=000000$,however large there exist a natural number $latex {n_0}&amp;fg=000000$ such that </p><p align="center">$latex \displaystyle |x_n-x_m| &lt; \frac{1}{P}&amp;fg=000000$</p>
+     for all $latex {n \geq n_0}&amp;fg=000000$   Now we define a relation $latex {R}&amp;fg=000000$ on the set $latex {S}&amp;fg=000000$ of all cauchy sequences of rational numbers as follows:
+    <p>
+    We say that the two Cauchy sequences of rational numbers $latex {\{a_n\}}&amp;fg=000000$ and $latex {\{b_n \}}&amp;fg=000000$ are related, i.e,</p><p align="center">$latex \displaystyle a_n \mathbf R 		 b_n \iff a_n-b_n \rightarrow 0.&amp;fg=000000$</p>
+     We prove the above relation $latex {R}&amp;fg=000000$ on the set of equivalence class of Cauchy sequences of rational numbers is an equivalence relation. Observe that the relation is reflexive, since any sequence the difference will turn out to be constant sequence of 0's which converges to 0. For symmetry we note that if $latex {\{a_n - b_n\}}&amp;fg=000000$ converges to zero for all $latex {n \geq n_0}&amp;fg=000000$ then the sequence $latex {\{b_n - a_n\}}&amp;fg=000000$ converges to zero after $latex {n_0}&amp;fg=000000$ as the modulus of $latex {|a_n - b_n| = |b_n - a_n| &lt; \frac{1}{P}}&amp;fg=000000$ for all $latex {n \geq n_0}&amp;fg=000000$.
+    <p>
+    We need to prove the relation is transitive for any sequences in $latex {S}&amp;fg=000000$. Let $latex {\{a_n\},\{b_n\},\{c_n\}}&amp;fg=000000$ be the sequences such that $latex {a_n R b_n}&amp;fg=000000$ and $latex {b_n R c_n}&amp;fg=000000$. As $latex {a_n - b_n \rightarrow 0}&amp;fg=000000$, there exist $latex {n_1}&amp;fg=000000$ for given $latex {2P &gt; 0}&amp;fg=000000$ such that </p><p align="center">$latex \displaystyle |a_n-b_n| &lt; \frac{1}{2P} &amp;fg=000000$</p>
+     for all $latex {n \geq n_1}&amp;fg=000000$; also there exist $latex {n_2}&amp;fg=000000$ for chosen $latex {2P &gt; 0}&amp;fg=000000$ such that <p align="center">$latex \displaystyle |b_n-c_n| &lt; \frac{1}{2P} &amp;fg=000000$</p>
+     for all $latex {n \geq n_2 }&amp;fg=000000$.
+    <p>
+    Let $latex {n_0 = max\{n_1,n_2\}}&amp;fg=000000$ observe that,</p><p align="center">$latex \displaystyle |a_n - c_n| \leq |a_n-b_n|+|b_n-c_n| &lt; \frac{1}{P}&amp;fg=000000$</p>
+     for all $latex {n \geq n_0}&amp;fg=000000$, which implies that $latex {\{a_n-c_n\}}&amp;fg=000000$ converges to 0 which is as required. Thus, the above relation is an <b>equivalence relation</b>.We shall now order the equivalence class of Cauchy sequence of rational numbers. Let A , B be two equivalence classes of sequence $latex {\{a_n\} }&amp;fg=000000$ and $latex {\{b_n\} }&amp;fg=000000$ in $latex {S}&amp;fg=000000$ respectively. We define an operation denoted by A+B and call ' addition ' the equivalence class containing the sequence $latex {\{a_n+b_n\} }&amp;fg=000000$. We verify that our operation on equivalence classes is well defined. Let, <p align="center">$latex \displaystyle a_n \sim {a_n}^{'} &amp;fg=000000$</p>
+     and <p align="center">$latex \displaystyle b_n \sim {b_n}^{'} &amp;fg=000000$</p>
+     using triangle inequality we deduce that $latex { a_n+b_n \sim {{a_n}^{'}}+{b_n}^{'} }&amp;fg=000000$ hence the above operation is well defined and moreover it is <b>closed</b> as the class A+B is also an equivalence class as <b>sum of two Cauchy sequences of is Cauchy</b> and addition of rational numbers is closed.
+    <p>
+    Step 1: The set $latex {S}&amp;fg=000000$ of equivalence classes is a group under operation of addition. We already observed that it is closed, and <b>associative</b> is followed by associativity of rational numbers.
+    </p><p>
+    <i>Existence of Identity</i> : Let $latex {0}&amp;fg=000000$ be an equivalence containing the constant sequence of 0's, A+$latex {0}&amp;fg=000000$ is an equivalence class containing the sequence $latex {\{a_n+0\} }&amp;fg=000000$ which is the precisely the equivalence containing $latex { \{a_n\} }&amp;fg=000000$ and by nature of equivalence classes that is they are equal or disjoint, the class containing $latex { \{a_n+0\} }&amp;fg=000000$ must be same as class containing $latex {\{a_n\}}&amp;fg=000000$,which is A.
+    </p><p>
+    <i>Existence of additive inverse</i> : We denote the equivalence containing $latex {\{-a_n\}}&amp;fg=000000$ by $latex {A' }&amp;fg=000000$, if A+B= $latex { 0 }&amp;fg=000000$ i.e A+B is an equivalence containing the constant sequence of 0's, therefore, any sequence in A+B must be equivalent to the sequence converging to zero and since the sequence $latex {\{a_n+(-an) \} }&amp;fg=000000$ also converges to 0 where $latex {\{-a_n\} }&amp;fg=000000$ comes from $latex {A'}&amp;fg=000000$ therefore the equivalence class B is same as $latex {A'}&amp;fg=000000$.
+    </p><p>
+    <i>Commutativity</i> : Observe the fact that equivalence class containing $latex {\{a_n+b_n\}}&amp;fg=000000$ that is $latex {A+B}&amp;fg=000000$ as the set of rational numbers is a field the sequence is same as $latex {\{b_n+a_n\}}&amp;fg=000000$ which is $latex {B+A}&amp;fg=000000$. Hence, the set $latex {S}&amp;fg=000000$ <b>group</b> under addition as stated. 
+    Step 2: We define 'product' between $latex { A }&amp;fg=000000$ and $latex {B}&amp;fg=000000$ in $latex {\mathbb R }&amp;fg=000000$ denoted by $latex {A.B }&amp;fg=000000$ to be the equivalence class of Cauchy sequence of rational numbers containing $latex {\{ a_n b_n \} }&amp;fg=000000$. The operation is well defined as sum of two Cauchy sequences is Cauchy and every Cauchy sequence is bounded. The operation is closed since the product of two Cauchy sequences is Cauchy.
+    </p><p>
+    <i>Associativity</i> : It follows from the associativity of rational numbers.
+    </p><p>
+    <i>Existence of inverse</i> : Let 1 be the equivalence class containing the constant sequence $latex {a_n =1 }&amp;fg=000000$ for all $latex {n \in \mathbb N }&amp;fg=000000$. We assert the this class is itself the multiplicative identity as every sequence in $latex { A .1 }&amp;fg=000000$ is same as the sequence in $latex { A }&amp;fg=000000$ and hence the property of equivalence classes it implies that $latex { A.1 = A }&amp;fg=000000$.
+    </p><p>
+    <i>Existence of inverse</i> : Let $latex {A \in \mathbb R }&amp;fg=000000$ and $latex {A \neq 0 }&amp;fg=000000$. Observe that $latex {\{a_n\}}&amp;fg=000000$ in $latex {A}&amp;fg=000000$ cannot converge to 0 if it converges to 0 than $latex {a_n \sim 0}&amp;fg=000000$ and hence is the equivalence class is same as 0 i.e $latex {A = 0 }&amp;fg=000000$. Since, the sequence $latex {a_n}&amp;fg=000000$ does not converge to $latex {0}&amp;fg=000000$ there exist $latex {p \in \mathbb{N} }&amp;fg=000000$ such that $latex {|a_n| &gt; \frac{1}{p}}&amp;fg=000000$ for all values of $latex {n}&amp;fg=000000$ except but finitely many. Now, $latex {a_n}&amp;fg=000000$ is Cauchy therefore is bounded it must follow that $latex {a_n \geq \frac{1}{p}}&amp;fg=000000$ or $latex {a_n \leq \frac{1}{-p}}&amp;fg=000000$ that is either $latex {A &gt; 0}&amp;fg=000000$ or $latex {A &lt; 0 }&amp;fg=000000$. Assume $latex { a_n \geq \frac{1}{p}}&amp;fg=000000$ for all $latex {n\geq n_0 }&amp;fg=000000$. Hence the sequence $latex {\{ 1,1,1,1,\cdots,\frac{1}{a_{n_0+1}},\cdots \} }&amp;fg=000000$ is cauchy and hence the $latex {A^{-1} }&amp;fg=000000$ is equivalence class containing this sequence.
+    </p><p>
+    <i>Distributivity and Commutativity</i> : Both follow from the fact that $latex { \mathbb{Q} }&amp;fg=000000$ is field.
+    </p><p>
+    We shall now define the set of all equivalence classes of Cauchy sequence of rational numbers to be the set $latex {\mathbb{R}}&amp;fg=000000$.
+    </p><p>
+    Step 4: The order relation $latex { \geq }&amp;fg=000000$ can be extended from $latex { \mathbb{Q} }&amp;fg=000000$ to $latex {\mathbb{R}}&amp;fg=000000$. We say that $latex {(a_n) \geq (b_n)}&amp;fg=000000$ if $latex {a_n \geq b_n}&amp;fg=000000$ for all but finitely many values of $latex {n}&amp;fg=000000$. With this definition we say $latex { A \geq B}&amp;fg=000000$, $latex { A, B \in \mathbb{R} }&amp;fg=000000$ if there exist a sequence $latex {(a_n) \in A }&amp;fg=000000$ and $latex { (b_n) \in B }&amp;fg=000000$ such that $latex {(a_n) \geq (b_n) }&amp;fg=000000$. It follows that $latex { A\geq B}&amp;fg=000000$ iff $latex {(a_n) \geq (b_n) }&amp;fg=000000$.
+    </p><p>
+    Step 5: Let $latex {A , B \in \mathbb R }&amp;fg=000000$ where $latex {A}&amp;fg=000000$ and $latex {B}&amp;fg=000000$ is an equivalence class of sequence $latex {a_n,b_n}&amp;fg=000000$ respectively. We define $latex { \widetilde{d}(A,B) }&amp;fg=000000$ on $latex { \mathbb{R}}&amp;fg=000000$ as the equivalence containing the sequence $latex {\{|a_n-b_n| \}}&amp;fg=000000$. We prove that $latex { \widetilde{d} }&amp;fg=000000$ is well defined. Suppose $latex {\{a_n\}^{'} \in A }&amp;fg=000000$ and $latex { \{b_n\}^{'} \in B }&amp;fg=000000$ than $latex {a_n \sim {a_n}^{'} }&amp;fg=000000$ and $latex {b_n \sim {b_n}^{'} }&amp;fg=000000$. Then we observe $latex { |a_n - b_n| \leq |a_n - {a_n}^{'}|+|{a_n}^{'}-{b_n}^{'}|+|{b_n}^{'}-b_n|}&amp;fg=000000$ from we get </p><p align="center">$latex \displaystyle  |a_n - b_n| - |{a_n}^{'}-{b_n}^{'}| &lt; |a_n - {a_n}^{'}|+|{b_n}^{'}-b_n|&amp;fg=000000$</p>
+     Similarly interchanging $latex {a_n }&amp;fg=000000$ and $latex {b_n}&amp;fg=000000$ with $latex {{a_n}^{'}}&amp;fg=000000$ and $latex {{b_n}^{'}}&amp;fg=000000$ we get <p align="center">$latex \displaystyle |{a_n}^{'}-{b_n}^{'}|- |a_n - b_n|&lt; |a_n - {a_n}^{'}|+|{b_n}^{'}-b_n|&amp;fg=000000$</p>
+     As $latex {(a_n - {a_n}^{'}) \rightarrow 0}&amp;fg=000000$ and $latex {(b_n - {b_n}^{'}) \rightarrow 0}&amp;fg=000000$ hence we conclude that $latex { |{a_n}^{'}-{b_n}^{'}| \sim |a_n - b_n| }&amp;fg=000000$. Hence $latex {\widetilde{d}}&amp;fg=000000$ is well defined.
+    <p>
+    Suppose $latex {\{a_n^{'}\} \in A }&amp;fg=000000$ and $latex { \{b_n^{'}\} \in B }&amp;fg=000000$ than $latex {a_n \sim {a_n}^{'} }&amp;fg=000000$ and $latex {b_n \sim {b_n}^{'} }&amp;fg=000000$. Then we observe $latex { |a_n - b_n| \leq |a_n - {a_n}^{'}|+|{a_n}^{'}-{b_n}^{'}|+|{b_n}^{'}-b_n|}&amp;fg=000000$ from we get, </p><p align="center">$latex \displaystyle  |a_n - b_n| - |{a_n}^{'}-{b_n}^{'}| &lt; |a_n - {a_n}^{'}|+|{b_n}^{'}-b_n|&amp;fg=000000$</p>
+     Similarly interchanging $latex {a_n }&amp;fg=000000$ and $latex {b_n}&amp;fg=000000$ with $latex {{a_n}^{'}}&amp;fg=000000$ and $latex {{b_n}^{'}}&amp;fg=000000$ we get, <p align="center">$latex \displaystyle |{a_n^{'}}-{b_n^{'}}|- |a_n - b_n|&lt; |a_n - {a_n}^{'}|+|{b_n}^{'}-b_n|&amp;fg=000000$</p>
+     As $latex {(a_n - {a_n^{'}}) \rightarrow 0}&amp;fg=000000$ and $latex {(b_n - {b_n}^{'}) \rightarrow 0}&amp;fg=000000$ hence we conclude that $latex { |{a_n}^{'}-{b_n}^{'}| \sim |a_n - b_n| }&amp;fg=000000$. Hence $latex {\widetilde{d}}&amp;fg=000000$ is well defined, and the properties such as <i>positivity, symmetry, triangle inequality</i> follow by nature of definition and properties of modulus. This makes $latex {(\mathbb{R} ,\widetilde{d} )}&amp;fg=000000$ a metric space.
+    <p>
+    
+    </p><blockquote><b>Theorem 1</b> <em> $latex {\mathbb{R}}&amp;fg=000000$ equipped with $latex {\widetilde{d}}&amp;fg=000000$ is a complete metric space. </em></blockquote>
+    
+    <p>
+    
+     <em>Proof:</em>  Suppose $latex {(A_n)}&amp;fg=000000$ is a Cauchy sequence in $latex {\mathbb{R}}&amp;fg=000000$. This means for any $latex {\widetilde{r} \in \mathbb{Q}}&amp;fg=000000$, $latex {\widetilde{r} &gt; \widetilde{0}}&amp;fg=000000$ there exist $latex {N \in \mathbb{N}}&amp;fg=000000$ such that </p><p align="center"> $latex {\widetilde{d}(A_n, A_m) &lt; \widetilde{r}, n,m \geq N .}&amp;fg=000000$ </p> The way we defined $latex {\widetilde{d}}&amp;fg=000000$, this means that for any sequence $latex {a_{n_{k}} \in A_{n}}&amp;fg=000000$,$latex {a_{m_{k}} \in A_{m}}&amp;fg=000000$. That is, there exist $latex {K&gt;0}&amp;fg=000000$ such that $latex {|a_{n_{k}}-a_{m_{k}}| &lt; r}&amp;fg=000000$ for $latex {n,m \geq N, k\geq K.}&amp;fg=000000$ Choosing $latex {M}&amp;fg=000000$ to be the maximum of $latex {K, N}&amp;fg=000000$ e have $latex {|a_{n_k}-a_{m_k}| &lt; r }&amp;fg=000000$ for all $latex {n,m \geq M }&amp;fg=000000$.
+    <p>
+    A natural limit of $latex {(A_n)}&amp;fg=000000$ is given by the diagonal sequence $latex {(A_{kk})_{k=1}^{\infty} }&amp;fg=000000$. It is clear that the sequence $latex {(a_{kk})}&amp;fg=000000$ is Cauchy. Let $latex {A}&amp;fg=000000$ be the equivalence class containing $latex {(a_{kk}).}&amp;fg=000000$ If we show that $latex {A_n \rightarrow A}&amp;fg=000000$, than we are done. Given $latex { r &gt; 0 }&amp;fg=000000$, $latex {r \in \mathbb{Q} }&amp;fg=000000$ as before take $latex {(a_{nk})\in A_n }&amp;fg=000000$ and $latex {N \mathbb{N} }&amp;fg=000000$ so that </p><p align="center">$latex \displaystyle |a_{nk}-a_{mk}| &lt; r,\text{ } n,m,k \geq N. &amp;fg=000000$</p>
+     In particular $latex {|a_{nk}-a_{kk}| &lt; r,\text{ } n,k \geq N }&amp;fg=000000$. This means $latex {\widetilde{d}(A_n, A) &lt; \widetilde{r} }&amp;fg=000000$ whenever $latex { n \geq N}&amp;fg=000000$. This completes the proof. $latex \Box&amp;fg=000000$
+    
+     
+    <blockquote><b>Theorem 2</b> <em> $latex {\mathbb{R}}&amp;fg=000000$ is a field which contains $latex { \widetilde{\mathbb{Q}} }&amp;fg=000000$ as a subfield. </em></blockquote>
+    
+    <p>
+    
+    
+    </p><p>
+    <em>Proof:</em>  $latex {\widetilde{\mathbb{Q}}}&amp;fg=000000$ is the image of $latex {\mathbb{Q}}&amp;fg=000000$ in $latex {\mathbb{R}}&amp;fg=000000$ under the map $latex { r \rightarrow \widetilde{r} = (r) }&amp;fg=000000$. Given $latex {A \in \mathbb{R}}&amp;fg=000000$ and $latex {(a_n) \in A }&amp;fg=000000$, choose $latex {N}&amp;fg=000000$ large enough so that $latex {|a_n -a_m| &lt; \frac{1}{p} }&amp;fg=000000$ for all $latex {m,n \geq N}&amp;fg=000000$ where $latex {p \in \mathbb{N}}&amp;fg=000000$ is given. Now consider $latex {\widetilde{d}(A, \widetilde{a_N}) &lt; \frac{1}{p}}&amp;fg=000000$. As $latex {p}&amp;fg=000000$ is arbitrary we have proved. $latex \Box&amp;fg=000000$
+    
+    
+    </p><p>
+    
+    
+    </p><p>
+    
+    <b>3. Dedekind Construction </b>
+    
+    </p><p>
+    
+    
+    </p><p>
+    The method developed by Dedekind makes use of cuts, which is a set $latex {\alpha \subset \mathbb{Q}}&amp;fg=000000$ satisfying the following properties;
+    </p><p>
+    (<b>1</b>) $latex {\alpha}&amp;fg=000000$ is not empty and $latex {\alpha \neq \mathbb{Q}}&amp;fg=000000$.
+    </p><p>
+    (<b>2</b>) If $latex {p \in \alpha}&amp;fg=000000$ , $latex {q \in \mathbb{Q}}&amp;fg=000000$ and $latex {q &lt; p}&amp;fg=000000$ then $latex {q \in \alpha}&amp;fg=000000$.
+    </p><p>
+    (<b>3</b>) If $latex {p \in \alpha}&amp;fg=000000$, then $latex {p &lt; r}&amp;fg=000000$ for some $latex {r \in \alpha}&amp;fg=000000$.
+    </p><p>
+    </p><p>
+    The figure <a href="#fig cut2">3</a> demonstrates a dedekind cut for obtaining irrational number $latex {\sqrt{2}}&amp;fg=000000$.
+    </p><p>
+    Now, using the set of all these cuts denoted by $latex {\mathbb{R}}&amp;fg=000000$, we claim the set $latex {\mathbb{ R}}&amp;fg=000000$ is an complete ordered field.
+    </p><p>
+    Step 1: Define $latex {\alpha &lt; \beta }&amp;fg=000000$ to mean $latex {\alpha}&amp;fg=000000$ is a proper subset of $latex {\beta}&amp;fg=000000$. And with this relation for any two elements one of the following must hold, </p><p align="center">$latex \displaystyle \alpha &lt; \beta , \alpha = \beta , \alpha &gt; \beta&amp;fg=000000$</p>
+    
+    <p>
+    If we assume that the first two fail, that is $latex {\alpha \not\subset \beta }&amp;fg=000000$. Then there exist $latex {p \in \alpha }&amp;fg=000000$ such that $latex { p \notin \beta }&amp;fg=000000$. If $latex {q \in \beta }&amp;fg=000000$, it follows that $latex {q&lt;p}&amp;fg=000000$, which implies that $latex {q \in \alpha }&amp;fg=000000$. Thus, $latex {q \in \alpha}&amp;fg=000000$, which means $latex {\alpha &gt; \beta}&amp;fg=000000$. Which precisely means $latex {\beta}&amp;fg=000000$ is a subset of $latex {\alpha}&amp;fg=000000$.
+    </p><p>
+    Step 2: The ordered set $latex {\mathbb{ R} }&amp;fg=000000$ has the least upper bound property. <em>Proof:</em>  Let $latex {A}&amp;fg=000000$ be a non-empty subset of $latex {\mathbb{R}}&amp;fg=000000$, and assume that $latex {\beta}&amp;fg=000000$ is an upper bound of $latex {A}&amp;fg=000000$. We Define $latex {\gamma}&amp;fg=000000$ to be the union of all $latex {\alpha \in A}&amp;fg=000000$, that is $latex {p\in \gamma}&amp;fg=000000$ if and only if $latex {p\in \alpha}&amp;fg=000000$ for some $latex {\alpha \in A}&amp;fg=000000$. We prove that $latex {\gamma \in \mathbb{R}}&amp;fg=000000$ and that $latex {\gamma =\sup A}&amp;fg=000000$.
+    </p><p>
+    Since, $latex {A}&amp;fg=000000$ is non-empty, there exists an $latex {\alpha_0 \in A}&amp;fg=000000$. This $latex {\alpha_0}&amp;fg=000000$ is not empty. Since $latex {\alpha_0 \subset \gamma}&amp;fg=000000$, $latex {\gamma}&amp;fg=000000$ is not empty. Next, $latex {\gamma \subset \beta}&amp;fg=000000$, and therefore $latex {\gamma \neq \mathbb{Q}}&amp;fg=000000$. Then $latex {\gamma}&amp;fg=000000$ satisfies first properties to be cut, choose $latex {p\in \gamma}&amp;fg=000000$. Then $latex {p\in \alpha_1}&amp;fg=000000$ for some $latex {\alpha_1 \in A}&amp;fg=000000$. If $latex { q &lt; p }&amp;fg=000000$, then $latex {q\in \alpha_1 }&amp;fg=000000$, hence $latex {q\in \gamma}&amp;fg=000000$; this proves our second property. If $latex {r\in \alpha_1}&amp;fg=000000$ is so chosen that $latex { r &gt; p }&amp;fg=000000$, we see that $latex {r\in \gamma}&amp;fg=000000$ (since $latex {\alpha_1 \in \gamma}&amp;fg=000000$), and therefore $latex {\gamma}&amp;fg=000000$ satisfies third property. Thus $latex {\gamma \in \mathbb{R}}&amp;fg=000000$. It is clear that $latex {\alpha \leq \gamma }&amp;fg=000000$ for every $latex {\alpha \in A}&amp;fg=000000$. Suppose $latex {\delta &lt; \gamma }&amp;fg=000000$. Then there is an $latex {s\in \gamma }&amp;fg=000000$ and that $latex {s\notin \delta}&amp;fg=000000$. Since $latex {s\in \gamma}&amp;fg=000000$, $latex {s\in \alpha}&amp;fg=000000$ for some $latex {\alpha \in A}&amp;fg=000000$. Hence $latex {\delta &lt; \alpha}&amp;fg=000000$, and $latex {\delta}&amp;fg=000000$ is not an upper bound of $latex {A}&amp;fg=000000$. This gives $latex {\gamma=\sup A}&amp;fg=000000$. $latex \Box&amp;fg=000000$
+    
+    
+    </p><p>
+    Step 3: The set $latex {\mathbb{R}}&amp;fg=000000$ is a field.
+    </p><p>
+    (1) If $latex {\alpha}&amp;fg=000000$ and $latex {\beta}&amp;fg=000000$ are in $latex {\mathbb{R}}&amp;fg=000000$, we define $latex {\alpha +\beta}&amp;fg=000000$ to be the set of all sum r + s, where $latex {r \in \alpha}&amp;fg=000000$ and $latex {s \in \beta}&amp;fg=000000$. And, we define $latex {0^*}&amp;fg=000000$ to be the set of all negative rational numbers.
+    </p><p>
+    (A1) We need to show that $latex {\alpha +\beta}&amp;fg=000000$ is a cut. Observe that $latex {\alpha +\beta}&amp;fg=000000$ is non-empty subset of $latex {\mathbb{Q}}&amp;fg=000000$. Take $latex {r' \notin \alpha }&amp;fg=000000$ , $latex {s' \notin \beta }&amp;fg=000000$. Then $latex {r'+s' &gt; r+s}&amp;fg=000000$ for all choices of $latex {r\in \alpha}&amp;fg=000000$, $latex {s\in \beta }&amp;fg=000000$. Thus $latex {r'+s' \notin \alpha + \beta }&amp;fg=000000$. 
+    </p><p>
+    Now choose $latex {p \in \alpha + \beta }&amp;fg=000000$. Then $latex {p=r+s}&amp;fg=000000$, with $latex {r \in \alpha }&amp;fg=000000$, $latex {r \in \alpha }&amp;fg=000000$, $latex {s \in \beta}&amp;fg=000000$. If $latex {q &lt; p }&amp;fg=000000$, then $latex { q-s &lt; r }&amp;fg=000000$, so $latex {q-s \in \alpha }&amp;fg=000000$, and $latex {q=(q-s)+s \in \alpha + \beta }&amp;fg=000000$. Thus (2) holds. Choose $latex {t\in \alpha }&amp;fg=000000$ and $latex {t &gt; r}&amp;fg=000000$. Then $latex {p &lt; t+s }&amp;fg=000000$ and $latex {t+s \in \alpha + \beta }&amp;fg=000000$. Thus, (3) holds.
+    </p><p>
+    (A2) Commutativity and associativity follow from $latex {\mathbb{Q}}&amp;fg=000000$ (A3) If $latex {r\in \alpha }&amp;fg=000000$ and $latex { s \in 0^* }&amp;fg=000000$, then $latex {r+s &lt; r }&amp;fg=000000$, hence $latex {r+s \in \alpha }&amp;fg=000000$. Thus $latex {\alpha + 0^* \subset \alpha }&amp;fg=000000$. To obtain the opposite inclusion, choose $latex {p\in \alpha }&amp;fg=000000$, and pick $latex {r \in \alpha }&amp;fg=000000$, $latex {r &gt; p }&amp;fg=000000$. Then $latex { p - r \in 0^* }&amp;fg=000000$ and $latex {p = r+(p-r) \in \alpha + 0^* }&amp;fg=000000$. Thus $latex {\alpha \subset \alpha + 0* }&amp;fg=000000$. We conclude that $latex {\alpha + 0^* = \alpha }&amp;fg=000000$.
+    </p><p>
+    (A4) Fix $latex {\alpha \in \mathbb{R}}&amp;fg=000000$. Let $latex {\beta }&amp;fg=000000$ be the set of all $latex {p}&amp;fg=000000$ with the following property: <i>There exists $latex {r &gt; 0 }&amp;fg=000000$ such that $latex { -p-r \notin \alpha }&amp;fg=000000$. We show that $latex {\beta \in \mathbb{R}}&amp;fg=000000$ and that $latex {\alpha + \beta = 0^* }&amp;fg=000000$.</i>.
+    </p><p>
+    If $latex {s \notin \alpha }&amp;fg=000000$ and $latex { p=-s-1 }&amp;fg=000000$, then $latex { -p-1 \notin \alpha }&amp;fg=000000$, hence $latex {p \in \beta }&amp;fg=000000$. So, $latex { \beta }&amp;fg=000000$ is not empty. If $latex { q \in \alpha }&amp;fg=000000$, then $latex { -q \notin \beta }&amp;fg=000000$. So $latex {\beta \neq \mathbb{Q}}&amp;fg=000000$. Hence $latex { \beta }&amp;fg=000000$ satisfies (1).
+    </p><p>
+    Choose $latex { p\in \beta }&amp;fg=000000$, and pick $latex { r&gt;0 }&amp;fg=000000$, so that $latex { -p-r \notin \alpha }&amp;fg=000000$. If $latex { q&lt; p }&amp;fg=000000$, then $latex { -q-r &gt; -p-r }&amp;fg=000000$, hence $latex { -q-r \notin \alpha }&amp;fg=000000$. Thus $latex { q \in \beta }&amp;fg=000000$, and (2) holds. We put $latex { t=p+\frac{r}{2} }&amp;fg=000000$. Then $latex { t &gt; p }&amp;fg=000000$, and $latex { -t-(r/2) = -p-r \notin \alpha }&amp;fg=000000$, so that $latex { t \in \beta }&amp;fg=000000$. Hence $latex { \beta }&amp;fg=000000$ satisfies (3). We have proved $latex { \beta }&amp;fg=000000$ is in $latex {\mathbb{R} }&amp;fg=000000$. 
+    </p><p>
+    If $latex { r \in \alpha }&amp;fg=000000$ and $latex { s \in \beta }&amp;fg=000000$, then $latex { -s \notin \alpha }&amp;fg=000000$, hence $latex { r&lt; -s }&amp;fg=000000$, $latex { r+s &lt; 0 }&amp;fg=000000$. Thus $latex { \alpha + \beta \subset 0^* }&amp;fg=000000$. To prove the reverse inclusion, pick $latex { v \in 0^* }&amp;fg=000000$, put $latex { w=-v/2 }&amp;fg=000000$. Then $latex { w &gt; 0 }&amp;fg=000000$, and there is an integer $latex {n}&amp;fg=000000$ such that $latex { nw \in \alpha }&amp;fg=000000$ but $latex { (n+1)w \notin \alpha }&amp;fg=000000$. (archimedean property of $latex {\mathbb{Q}}&amp;fg=000000$). Put $latex { p = -(n+2)w. }&amp;fg=000000$ Then $latex {p \in \beta }&amp;fg=000000$, since $latex { -p-w \notin \alpha }&amp;fg=000000$, and </p><p align="center">$latex \displaystyle  v=nw+p \in \alpha + \beta .&amp;fg=000000$</p>
+     Thus $latex { 0^* \subset \alpha + \beta. }&amp;fg=000000$ We conclude that $latex { \alpha + \beta = 0^* }&amp;fg=000000$. The procedure is same as we proved in the addition case and this definition all=so preserves the fat $latex {\alpha &gt; 0^* }&amp;fg=000000$ and $latex {\beta &gt; 0^* }&amp;fg=000000$ then $latex { \alpha \beta &gt; 0^* }&amp;fg=000000$.
+    <p>
+    (2) Multiplication is not defined in the usual way because multiplication of two negative rational is positive, thus the trouble arises if both consists of negative rational numbers. Than there will be no negative rational numbers in the product though they are less than other numbers in the set, which definitely can't be a cut. Hence, we define product $latex {\alpha \dot \beta}&amp;fg=000000$ as the set of all $latex {p \leq rs}&amp;fg=000000$, where $latex {r \in \alpha}&amp;fg=000000$ and $latex {s \in \beta}&amp;fg=000000$. We define $latex {1^*}&amp;fg=000000$ to be the set of all $latex { q&lt; 1 }&amp;fg=000000$. Then axioms of multiplication holds with $latex { \mathbb{R}^+ }&amp;fg=000000$.
+    </p><p>
+    We define the multiplication as follows: </p><p align="center">$latex \displaystyle  \alpha \beta = \begin{cases} (- \alpha )( -\beta ) &amp; \text{if } \alpha &lt; 0^* , \beta &lt; 0^* \\ -[(-\alpha ) \beta ] &amp; \text{if } \alpha &lt; 0^* , \beta &gt; 0^* \\ -[ \alpha (-\beta )] &amp; \text{if } \alpha &gt; 0^* , \beta &lt; 0^* \end{cases} &amp;fg=000000$</p>
+    
+    <p>
+    The proof of distributive law </p><p align="center">$latex \displaystyle \alpha (\beta + \gamma) = \alpha \beta + \alpha \gamma &amp;fg=000000$</p>
+     is as follows. For instance, suppose $latex {\alpha &gt; 0^* }&amp;fg=000000$, $latex {\beta &lt; 0* }&amp;fg=000000$, $latex {\beta + \gamma &gt; 0^* }&amp;fg=000000$. Then $latex {\gamma = (\beta + \gamma )+( -\beta )}&amp;fg=000000$. And we know that distributive law holds in $latex {\mathbb{R}^+}&amp;fg=000000$ <p align="center">$latex \displaystyle \alpha \gamma = \alpha (\beta + \gamma) + \alpha (-\beta) .&amp;fg=000000$</p>
+     But $latex {\alpha (-\beta )= -( \alpha \beta ) }&amp;fg=000000$. Thus<p align="center">$latex \displaystyle  \alpha \beta + \alpha \gamma = \alpha (\beta + \gamma ). &amp;fg=000000$</p>
+    Similarly, we can prove other cases. 
+    <p>
+    <i>We have an order field with the least upper bound property</i>. Moreover any two ordered field with least upper bound property are isomorphic. Therfore our constructed field is same as $latex {\mathbb{R}}&amp;fg=000000$, that is the set of all real numbers.
+    </p><p>
+    
+    </p><p>
+    
+    
+    </p><p>
+    
+    <b>4. Fundamental Theorem of Algebra </b>
+    
+    </p><p>
+    
+     We consider polynomials p(z) with coefficients from $latex {\mathbb{C} }&amp;fg=000000$ : </p><p align="center">$latex \displaystyle p(z) = a_0 + a_1z + \dots + a_nz^n, a_j \in \mathbb{C}&amp;fg=000000$</p>
+     We say that p(z) is of degree n if $latex {a_n \neq 0}&amp;fg=000000$. Our aim is to prove the following result which is known as the fundamental theorem of algebra. We denote a closure of ball of radius $latex {R}&amp;fg=000000$ centred at $latex {0}&amp;fg=000000$ by $latex {\overline{B_R\{0\}}}&amp;fg=000000$. 
+    <blockquote><b>Theorem 3</b> <em> For every polynomial $latex {p(z)}&amp;fg=000000$ as above, the equation p(z) = 0 has at least one solution in $latex {\mathbb{C}}&amp;fg=000000$. </em></blockquote>
+    
+    <p>
+    
+    
+    </p><p>
+    We make use of the following lemmas to prove the above theorem.
+    </p><p>
+    
+    </p><blockquote><b>Lemma 4</b> <em> There exists $latex {R &gt; 0}&amp;fg=000000$ such that $latex {|p(z)| \geq |a_0|}&amp;fg=000000$ for all z with $latex {|z| &gt; R}&amp;fg=000000$. </em></blockquote>
+    
+    <p>
+    
+    
+    </p><p>
+    <em>Proof:</em>  Let $latex {b_j=a_j a_n^{-1} ,j = 0,1,2, \dots ,n;}&amp;fg=000000$ </p><p align="center">$latex \displaystyle |p(z)|=|a_n||z^n+b_{n-1}z^{n-1}+\dots+b_0. &amp;fg=000000$</p>
+     Using triangle inequality, <p align="center">$latex \displaystyle |p(z)|\geq|a_n|\big( |z|^n-|b_{n-1}z^{n-1}+\dots+b_0|).&amp;fg=000000$</p>
+     Again by triangle inequality,<p align="center">$latex \displaystyle |b_{n-1}z^{n-1}+\dots+b_0|\leq \sum_{j=0}^{n-1}|b_j| |z|^{j} \leq \beta\frac{|z|^n-1}{|z|-1}&amp;fg=000000$</p>
+     where $latex {\beta = max\{|b_j|,j=0 ...n-1\}.}&amp;fg=000000$ Thus <p align="center">$latex \displaystyle  |p(z)| \geq |a_n|\Bigg(|z|^n-\frac{\beta|z|^n}{|z|-1}+\frac{\beta}{|z|-1}\Bigg)\geq |a_n|\Bigg(1-\frac{\beta}{|z|-1}\Bigg)|z|^n &amp;fg=000000$</p>
+     provided $latex {|z|&gt;1}&amp;fg=000000$. Thus we have<p align="center">$latex \displaystyle |p(z)|\geq\frac{1}{2} |a_n||z|^n&amp;fg=000000$</p>
+     whenever $latex {\bigg(1-\frac{\beta}{|z|-1}\bigg)&gt;\frac{1}{2}}&amp;fg=000000$ or $latex {|z|&gt;2\beta+1}&amp;fg=000000$. We can achieve $latex {|p(z)|\geq |a_0|}&amp;fg=000000$ by choosing z such that $latex {|z|&gt;2\beta+1}&amp;fg=000000$ and $latex {|z|^n &gt;\frac{2|a_0|}{|a_n|}}&amp;fg=000000$. That is we can choose $latex {R}&amp;fg=000000$ satisfying $latex {R&gt;2\beta+1}&amp;fg=000000$ and $latex {R^n&gt;\frac{2a_0}{a_n}}&amp;fg=000000$ follows from the fact that the set $latex {\{|z|^n\}}&amp;fg=000000$ is unbounded i.e., given any $latex {M\in \mathbb{N}}&amp;fg=000000$ we can choose $latex {z_1}&amp;fg=000000$ with $latex {|z_1|&gt;1}&amp;fg=000000$ such that $latex {|z_1|^n&gt;M}&amp;fg=000000$. This proves our lemma. $latex \Box&amp;fg=000000$
+    
+    
+    <p>
+    
+    </p><blockquote><b>Lemma 5</b> <em> In $latex {\overline{B_R (0)}}&amp;fg=000000$, $latex {|p(z)|}&amp;fg=000000$ attains its minimum, that is there exists $latex {a \in \overline{B_R (0)}}&amp;fg=000000$ such that $latex {|p(a)| \leq |p(z)|}&amp;fg=000000$ for all z $latex {\in \overline{B_R (0)}}&amp;fg=000000$. </em></blockquote>
+    
+    <p>
+    
+     The above lemma requires the following results.
+    </p><p>
+    (0) : <i>Every non empty set $latex {A \subset R }&amp;fg=000000$ which is bounded above (below) has a supremum (infimum).</i> <em>Proof:</em>  Assume that A is bounded above and let $latex { a_1 }&amp;fg=000000$ be a non upper bound and $latex { b_1}&amp;fg=000000$ is an upper bound. Consider the interval $latex {I_1=[a_1,b_1]}&amp;fg=000000$ and divide it into two equal parts; that is $latex {I_1=[a_1,\frac{1}{2}(a_1+b_1)]\cup[\frac{1}{2}(a_1+b_1),b_1]}&amp;fg=000000$. Of these choose the interval for which the left end point is not an upper bound but the right end point is an upper bound and call it $latex {I_2=[a_2,b_2]}&amp;fg=000000$. Repeat the procedure choosing $latex {I_j=[a_j,b_j] \subset I_{j-1}}&amp;fg=000000$ such that $latex {a_j}&amp;fg=000000$ is not an upper bound and $latex {b_j}&amp;fg=000000$ is an upper bound. Observe that the sequence $latex {(a_j)}&amp;fg=000000$ is increasing and the sequence $latex {(b_j)}&amp;fg=000000$ is decreasing. As both sequence are bounded they converge. Let $latex {a_j \rightarrow a}&amp;fg=000000$ and $latex {b_j \rightarrow b}&amp;fg=000000$. But $latex {(b_j-a_j)\rightarrow 0 }&amp;fg=000000$ which implies a=b. Since, $latex {x\leq b_j}&amp;fg=000000$ for any j and $latex {x \in A}&amp;fg=000000$, we get $latex {x \leq a}&amp;fg=000000$for all $latex {x \in A}&amp;fg=000000$. If $latex {a^{'} &lt; a }&amp;fg=000000$ then there exist j large so that $latex {a^{'} &lt;a_j&lt;a}&amp;fg=000000$ but than $latex {a_j}&amp;fg=000000$ is not an upper bound, $latex {a^{'} }&amp;fg=000000$ also is not an upper bound. Hence $latex {a = supA}&amp;fg=000000$. $latex \Box&amp;fg=000000$
+    
+    
+    </p><p>
+    (Corollary) : <i>If A is bounded above then there exists a sequence $latex {(a_j) \in A}&amp;fg=000000$ , such that $latex {(a_j)\rightarrow sup A}&amp;fg=000000$.</i>
+    </p><p>
+    
+    </p><blockquote><b>Lemma 6</b> <em> Given a sequence $latex {(z_n) \in \overline{B_R(0)}}&amp;fg=000000$ there is a subsequence $latex {(z_{n_k} )}&amp;fg=000000$ which converges to some $latex {a \in \overline{B_R(0)}}&amp;fg=000000$ </em></blockquote>
+    
+    <p>
+    
+     <em>Proof:</em>  Let $latex {z_n= x_n+iy_n}&amp;fg=000000$, so that $latex {|x_n|\leq R}&amp;fg=000000$ and $latex {|y_n|\leq R }&amp;fg=000000$. As $latex {\{x_n\}}&amp;fg=000000$ is bounded there exist a subsequence $latex {(x_{n_k})}&amp;fg=000000$ which converges to some $latex {x\in \mathbb{R}}&amp;fg=000000$. Similarly the sequence $latex {\{y_n\}}&amp;fg=000000$ has a subsequence converging to $latex {y}&amp;fg=000000$. Put together there exits a subsequence of $latex {z_n}&amp;fg=000000$ converging to $latex {x+iy}&amp;fg=000000$. As $latex {|z_n| \leq R}&amp;fg=000000$ for all n, we get $latex {|a|\leq R}&amp;fg=000000$ as well. $latex \Box&amp;fg=000000$
+    
+    
+    </p><p>
+    
+    </p><blockquote><b>Lemma 7</b> <em> Let $latex {p(z)}&amp;fg=000000$ be a polynomial. If $latex {(z_n)}&amp;fg=000000$ converges to $latex {a}&amp;fg=000000$ then $latex {(p(z_n))}&amp;fg=000000$ converges to $latex {p(a)}&amp;fg=000000$. </em></blockquote>
+    
+    <p>
+    
+     <em>Proof:</em>  </p><p align="center">$latex \displaystyle p(z) -p(a)=\sum_{j=0}^{n}a_j (z^j-a^j)&amp;fg=000000$</p>
+     and $latex {z^j -a^j = (z-a) (z^{j-1} +z^{j-2} a+\dots +a^{j-1}}&amp;fg=000000$. Hence, <p align="center">$latex \displaystyle p(z)-p(a)=(z-a)q(z)&amp;fg=000000$</p>
+     where q is a polynomial of degree n-1 and also q is bounded on the set $latex {|z-a|\leq 1}&amp;fg=000000$ and so <p align="center">$latex \displaystyle |p(z)-p(a)|\leq C |z-a|&amp;fg=000000$</p>
+    . From this our lemma is followed. $latex \Box&amp;fg=000000$
+    
+    
+    <p>
+    Now ,we will prove our lemma 4.3, <em>Proof:</em>  Let $latex {R&gt;1}&amp;fg=000000$ and consider </p><p align="center">$latex \displaystyle A=\{|p(z)|: z\in \overline{B_{R}(0)}.&amp;fg=000000$</p>
+    It is clear that A is bounded below and also note that $latex {|p(z)|\leq CR^{n}}&amp;fg=000000$. Therefore, A has a infimum, that is there exist $latex {m\geq 0}&amp;fg=000000$ such that $latex {|p(z)|\geq m}&amp;fg=000000$. Now , than using corollary there exist a sequence $latex {a_n }&amp;fg=000000$ converging to m. But then there exist $latex {z_n \in \overline{B_{R}(0)}}&amp;fg=000000$ with $latex {a_n=|p(z_n)|}&amp;fg=000000$ by the definition of A. Hence $latex {z_n}&amp;fg=000000$ has a subsequence converging to a in $latex { \overline{B_{R}(0)}}&amp;fg=000000$, say $latex {z_{n_k}}&amp;fg=000000$. Therefore, $latex {|p(z_{n_k})| \rightarrow |p(a)|}&amp;fg=000000$ and hence $latex {|p(a)|=m}&amp;fg=000000$, by uniqueness of limits. $latex \Box&amp;fg=000000$
+    
+    
+    <p>
+    All the above statements help us to conclude that any polynomial $latex {p(z)}&amp;fg=000000$ attains its minimum. Hence, the following lemma finally gives us the required result.
+    </p><p>
+    
+    </p><blockquote><b>Lemma 8</b> <em>Let p(z) be a polynomial and $latex {a \in \mathbb{C}}&amp;fg=000000$ is such that $latex {|p(z)| \geq |p(a)|}&amp;fg=000000$ for all $latex {z\in \mathbb{C}}&amp;fg=000000$. Then $latex {p(a) = 0 }&amp;fg=000000$. </em></blockquote>
+    
+    <p>
+    
+    
+    </p><p>
+    <i>Proof</i> : We write $latex {z=z-a+a}&amp;fg=000000$ , we get </p><p align="center">$latex \displaystyle p(z) = p(z-a+a) = A_0 + A_1 (z-a)+\dots + A_n (z-a)^n&amp;fg=000000$</p>
+     where $latex {A_0 = p(a) and A_n \neq 0}&amp;fg=000000$. If $latex {A_k}&amp;fg=000000$ is the first non zero coefficient (after $latex {A_0}&amp;fg=000000$) we have <p align="center">$latex \displaystyle p(z)= A_0 + A_k (z-a)^k +A_{k+1} (z-a)^{k+1}+\dots +A_n (z-a)^n&amp;fg=000000$</p>
+     we rewrite this as <p align="center">$latex \displaystyle p(z) = p(a) + A_k (z-a)^k+ A_k (z-a)^{k+1} Q(z)&amp;fg=000000$</p>
+     where <p align="center">$latex \displaystyle  Q(z) = \frac{A_{k+1}}{A_k}+\frac{A_{k+2}}{A_k}(z-a)+\dots+\frac{A_n}{A_k} (z-a)^{n-k-1}&amp;fg=000000$</p>
+     . where z is close enough to a, $latex {A_k (z-a)^{k+1} Q(z)}&amp;fg=000000$ is extremely small. If we can choose z in such a way that $latex {p(a) + A_k (z-a)^k}&amp;fg=000000$ is equal to $latex {(1-c) p(a)}&amp;fg=000000$; where $latex {0&lt;c&lt;1}&amp;fg=000000$, then for such a z, than for such a z, $latex {|p(z)|}&amp;fg=000000$ will be smaller than $latex {|p(a)|}&amp;fg=000000$ which will force $latex {|p(a)|=0}&amp;fg=000000$ (observe that $latex {|p(a)| \leq |p(z)| \forall z\in \mathbb{C}}&amp;fg=000000$).
+    <p>
+    We can do this by considering </p><p align="center">$latex \displaystyle p(a) + A_k (z-a)^k = (1-c)p(a), 0&lt;c&lt;1&amp;fg=000000$</p>
+    
+    <p>
+    Observe that $latex {|z-a|&lt;1}&amp;fg=000000$, </p><p align="center">$latex \displaystyle  Q(z) \leq \frac{|A_{k+1}|}{|A_k|}+\frac{|A_{k+2}|}{|A_k|}+\dots+\frac{|A_n|}{|A_k|} = C&amp;fg=000000$</p>
+     Let $latex {\delta}&amp;fg=000000$ chosen such that $latex {0&lt;\delta&lt;1}&amp;fg=000000$ and $latex {\delta C &lt;1}&amp;fg=000000$, then for $latex {|z-a|&lt;\delta}&amp;fg=000000$ we have $latex {|z-a||Q(z)|&lt;1}&amp;fg=000000$. Let us choose $latex {0&lt;c&lt;1}&amp;fg=000000$ such that $latex {c\frac{|p(a)|}{A_k}&lt; \delta^k }&amp;fg=000000$. Then any solution of $latex {A_k(z-a)^k=-cp(a)}&amp;fg=000000$ will satisfy $latex {|z-a|&lt;\delta}&amp;fg=000000$. If z is such that <p align="center">$latex \displaystyle p(z) = p(a)-cp(a)-cp(a)(z-a)Q(z)&amp;fg=000000$</p>
+     which gives <p align="center">$latex \displaystyle |p(z)| \leq (1-c)|p(a)|+c|p(a)||z-a||Q(z)|&lt;p(a)&amp;fg=000000$</p>
+     which leads us to contradiction. Hence, our required result is proved.
+    <p>
+    
+    
+    </p><p>
+    
+    <b>5. The Space of Continuous Functions. </b>
+    
+    </p><p>
+    
+    
+    </p><p>
+    Let us denote the set of polynomials of the form $latex {p(x)= a_0+a_1 x+ a_2x^2+\dots+a_n x^n}&amp;fg=000000$ defined over the closed and bounded interval $latex {[a,b]}&amp;fg=000000$ by $latex {\mathcal{P}[a,b]}&amp;fg=000000$. Now, we define a metric $latex {d}&amp;fg=000000$ such that $latex {d(f,g)=\sup_{x\in [a,b]}|f(x)-g(x)|}&amp;fg=000000$. Observe that if $latex {d(f,g)=0}&amp;fg=000000$ implies the supremum is zero which naturally implies that $latex {f(x)=g(x)}&amp;fg=000000$ for all x in $latex {[a,b]}&amp;fg=000000$ due to the <i>positivity</i> of modulus. Hence, symmetry and triangle inequality follow from the symmetry of modulus and triangle inequality respectively. Therefore, $latex {(\mathcal{P}[a,b],d)}&amp;fg=000000$ is metric space.
+    </p><p>
+    We claim that that the metric space $latex {(\mathcal{P}[a,b],d)}&amp;fg=000000$ is not complete. For that, we look at the following sequence in $latex {\mathcal{P}[a,b]}&amp;fg=000000$, </p><p align="center">$latex \displaystyle f_n = \sum_{k=0}^{n} \frac{x^k}{k!}&amp;fg=000000$</p>
+     Clearly, each $latex {f_n}&amp;fg=000000$ is a polynomial and it is easy to see that the this sequence is Cauchy on [0,1](without loss of generality). Indeed, if $latex {m&gt;n}&amp;fg=000000$ <p align="center">$latex \displaystyle p_m(x)-p_n(x)=\sum_{k=n+1}^m\frac{x^k}{k!}&amp;fg=000000$</p>
+     so that $latex {d(p_m,p_n)\leq \sum_{k=n+1}^{m} \frac{1}{k!}}&amp;fg=000000$. Since, the numerical sequence converges to $latex {e}&amp;fg=000000$ the $latex {d(p_m,p_n)\rightarrow 0}&amp;fg=000000$ as $latex {n,m \rightarrow \infty }&amp;fg=000000$. We know that the sequence of polynomial converges to $latex {e^x}&amp;fg=000000$ on interval $latex {[a,b]}&amp;fg=000000$. And $latex {e^x}&amp;fg=000000$ is not a polynomial which clearly shows that we have a Cauchy sequence which doesn't converge to a polynomial, which proves our claim that metric space is not complete. 
+    <p>
+    Given any incomplete metric space it can be embedded into a complete metric space. The construction is similar to that of Weiertstrass construction of real numbers from ration numbers. Let $latex {M'}&amp;fg=000000$ denote the set of equivalence classes of Cauchy sequences in M(which is incomplete) under the relation "$latex {(x_n) \sim (y_n)}&amp;fg=000000$ iff $latex {d(x_n,y_n)\rightarrow 0}&amp;fg=000000$." Then $latex {(M',d)}&amp;fg=000000$ turns out to be a complete metric space (completion of M). This procedure we follow in the completion of the polynomial space.
+    </p><p>
+    Let $latex {(p_n)\in \mathcal{P}[a,b]}&amp;fg=000000$ be Cauchy sequence. Then for any $latex {x \in [a,b]}&amp;fg=000000$ the sequence $latex {p_n}&amp;fg=000000$ converges in $latex {\mathbb{C}}&amp;fg=000000$. Let us define a function $latex {f:[a,b]\rightarrow \mathbb{C}}&amp;fg=000000$ such that $latex {f(x) = \lim_{n\rightarrow \infty} p_n(x).}&amp;fg=000000$ We claim the following :
+    </p><p>
+    (i) $latex {f}&amp;fg=000000$ is bounded.
+    </p><p>
+    (ii)$latex {lim_{n \rightarrow \infty} ||p_n -f||=0 }&amp;fg=000000$ (where $latex {||f|| = \sup_{x\in [a,b]} |f(x)|}&amp;fg=000000$). It converges uniformly to $latex {f}&amp;fg=000000$ on $latex {[a,b]}&amp;fg=000000$.
+    </p><p>
+    As $latex {(p_n)}&amp;fg=000000$ is a Cauchy sequence, there exists $latex {N}&amp;fg=000000$ such that $latex {||p_n-p_m|| \leq 1}&amp;fg=000000$ for all $latex {n,m\geq N}&amp;fg=000000$. Given $latex {x\in [a,b]}&amp;fg=000000$, $latex {p_n(x) \rightarrow f(x)}&amp;fg=000000$, there exist $latex {N(x)&gt;0}&amp;fg=000000$ such that $latex {|f(x)-p_n(x)|\leq 1}&amp;fg=000000$ for all $latex {n\geq N(x)}&amp;fg=000000$. Taking $latex {N_1 = max\{N, N(x)\}}&amp;fg=000000$, we have </p><p align="center">$latex \displaystyle |f(x)|\leq |f(x)-p_{N_1}(x)|+|p_{N_1}(x)|\leq 1+||p_{N_1}||&amp;fg=000000$</p>
+     As $latex {(p_n)}&amp;fg=000000$ is Cauchy $latex {||p_n||\leq C}&amp;fg=000000$ for a $latex {C}&amp;fg=000000$ independent of n. Hence, $latex {||f||\leq 1+C}&amp;fg=000000$.
+    <p>
+    Also, given $latex {\epsilon &gt;0}&amp;fg=000000$ choose $latex {N&gt;0}&amp;fg=000000$ such that $latex {||p_n-p_m||&lt;\frac{1}{2} \epsilon}&amp;fg=000000$, for all $latex {n,m\geq N and N(x)}&amp;fg=000000$ for $latex {x\in [a,b]}&amp;fg=000000$ such that $latex {|f(x)-p_n(x)|&lt; \frac{\epsilon}{2}}&amp;fg=000000$, $latex {n\geq N(x)}&amp;fg=000000$. Then for $latex {N_1=max\{N, N(x)\}}&amp;fg=000000$,</p><p align="center">$latex \displaystyle |f(x)-p_n(x)|\leq |f(x)-p_{N_1(x)}|+|p_{N_1}(x)-p_n(x)| &lt;\epsilon &amp;fg=000000$</p>
+     provided $latex {n &gt; N}&amp;fg=000000$. As this $latex {N}&amp;fg=000000$ is independent of x <p align="center">$latex \displaystyle \sup_{x\in [a,b]} |f(x)-p_n(x)|&lt;\epsilon&amp;fg=000000$</p>
+     for all $latex {n\geq N}&amp;fg=000000$.
+    <p>
+    The above considerations lead us to define the space $latex {C[a,b]}&amp;fg=000000$ as the set of all $latex {f:[a,b] \rightarrow \mathbb{C}}&amp;fg=000000$ for which there is a sequence of polynomials which converge uniformly to $latex {f}&amp;fg=000000$ on the interval $latex {[a,b]}&amp;fg=000000$
+    </p><p>
+    
+    </p><blockquote><b>Theorem 9</b> <em> $latex {C[a,b]}&amp;fg=000000$ is a complete metric space (with respect to metric $latex {d}&amp;fg=000000$). </em></blockquote>
+    
+    <p>
+    
+     <em>Proof:</em>  Let $latex {(f_n)}&amp;fg=000000$ be a Cauchy sequence. Then certainly, we can define a function $latex {f(x)}&amp;fg=000000$ by $latex {f(x)=\lim_{n\rightarrow \infty} f_n(x)}&amp;fg=000000$. We need to show that $latex {f \in C[a,b]}&amp;fg=000000$. Given $latex {x \in [a,b]}&amp;fg=000000$, choose $latex {N(x)}&amp;fg=000000$ so that $latex {|f(x)-f_{N(x)}(x)|\leq 1}&amp;fg=000000$. Then, </p><p align="center">$latex \displaystyle |f(x)|\leq |f_{N(x)}(x)-f(x)|+|f_{N(x)}(x)|\leq 1+\sup_n||f_n||&amp;fg=000000$</p>
+     As $latex {f_n}&amp;fg=000000$ is Cauchy, $latex {\sup||f_n||&lt; \infty}&amp;fg=000000$ and hence for any $latex {x\in [a,b]}&amp;fg=000000$, $latex {|f(x)|\leq 1+sup_n||f_n||}&amp;fg=000000$ or $latex {f}&amp;fg=000000$ is bounded.
+    <p>
+    Our next claim is that $latex {||f-f_n||\rightarrow 0}&amp;fg=000000$ as $latex {n \rightarrow \infty}&amp;fg=000000$. Given $latex {\epsilon &gt;0}&amp;fg=000000$, choose $latex {N}&amp;fg=000000$ so that $latex {||f_n-f_m||&lt; \frac{\epsilon}{2}}&amp;fg=000000$ for all $latex {n,m \geq N}&amp;fg=000000$. Let $latex {x\in [a,b]}&amp;fg=000000$ and choose $latex {N(x)}&amp;fg=000000$ so that </p><p align="center">$latex \displaystyle |f(x)-f_n(x)|\leq |f(x)-f_{N_1(x)}(x)|+|f_{N_1(x)}(x)-f_n(x)| &lt;\epsilon&amp;fg=000000$</p>
+    
+    <p>
+    if $latex {N_1(x)&gt; max\{N,N(x)\}}&amp;fg=000000$ and $latex {n&gt;N}&amp;fg=000000$. Thus, $latex {||f-f_n||&lt; \epsilon }&amp;fg=000000$ for all $latex {n&gt;N}&amp;fg=000000$ which proves the claim.
+    </p><p>
+    Finally, for any $latex {k\in \mathbb{N}}&amp;fg=000000$ choose $latex {f_{n_k}}&amp;fg=000000$ so that $latex {||f-f_{n_k}||&lt;2^{-k-1}}&amp;fg=000000$. As $latex {f_{n_k} \in C[a,b]}&amp;fg=000000$, choose a polynomials $latex {p_{k}}&amp;fg=000000$ such that $latex {||f_{n_k}-p_k||&lt;2^{-k-1}}&amp;fg=000000$. Then $latex {||f-p_k||\leq ||f-f_{n_k}||+||f_{n_k}-p_k||&lt; 2^{-k} }&amp;fg=000000$ and hence, $latex {p_k}&amp;fg=000000$ converges to $latex {f}&amp;fg=000000$ in $latex {C[a,b]}&amp;fg=000000$. This completes the proof.
+    
+    Given a function $latex {f:[a,b] \rightarrow \mathbb{C}}&amp;fg=000000$ it is not easy to determine whether $latex {f\in C[a,b]}&amp;fg=000000$ or not. The next section proceeds for characterisation of the space $latex {C[a,b]}&amp;fg=000000$ using a property called as uniform continuity of members of $latex {c[a,b]}&amp;fg=000000$.
+    </p><p>
+    If p is a polynomial and if $latex {x,y \in [a,b]}&amp;fg=000000$ we know that</p><p align="center">$latex \displaystyle p(x)-p(y)=(x-y)q(x,y)&amp;fg=000000$</p>
+     where q is a polynomial in two variables. So, we have $latex {|p(x)-p(y)|\leq C|x-y|}&amp;fg=000000$
+    <p>
+    where $latex {C= sup\{|q(x,y)|: x,y\in [a,b]\} &lt; \infty}&amp;fg=000000$. This implies:
+    </p><p>
+    Given $latex {\epsilon &gt;0}&amp;fg=000000$, there exists $latex {\delta &gt;0}&amp;fg=000000$ such that $latex {|p(x)-p(y)|&lt;\epsilon}&amp;fg=000000$ whenever $latex {|x-y|&lt;\delta}&amp;fg=000000$. This property holds for any member of $latex {C[a,b]}&amp;fg=000000$. Indeed , if $latex {f\in C[a,b]}&amp;fg=000000$ </p><p align="center">$latex \displaystyle |f(x)-f(y)|\leq |f(x)-p_n(x)|+|p_n(x)-p_n(y)|+|p_n(y)-f(y)|&amp;fg=000000$</p>
+     we only need to choose n first; so that $latex {||f-p_n||&lt; \frac{\epsilon}{3}}&amp;fg=000000$ so that $latex {|p_n(x)-p_n(y)|&lt; \frac{\epsilon}{3}}&amp;fg=000000$ for $latex {|x-y|&lt; \delta}&amp;fg=000000$. This leads us to the following definition.
+    <p>
+     Let $latex {f:[a,b] \rightarrow\mathbb{C}}&amp;fg=000000$ is said to be uniformly continuous on $latex {[a,b]}&amp;fg=000000$, if the above property holds. 
+    </p><p>
+    
+    </p><blockquote><b>Theorem 10 (Weierstrass approximation theorem)</b> <em> $latex {f\in C[a,b]}&amp;fg=000000$ iff f is uniformly continuous on $latex {[a,b]}&amp;fg=000000$. </em></blockquote>
+    
+    <p>
+    
+     <em>Proof:</em>  If $latex {f}&amp;fg=000000$ is uniformly continuous on $latex {[a,b]}&amp;fg=000000$ then $latex {g(x)=f(a+(b-a)x)}&amp;fg=000000$ is uniformly continuous on [0,1] and hence its enough to prove that g can be approximated by polynomials uniformly on [0,1]. Therefore, we can assume [a,b]=[0,1] to start with.
+    </p><p>
+    We explicitly construct a sequence of $latex {p_n}&amp;fg=000000$ of polynomials, depending on f such that $latex {||f-p_n||\rightarrow 0}&amp;fg=000000$.Let </p><p align="center">$latex \displaystyle p_n(x)=\sum_{k=0}^{n}\binom{n}{k} f\bigg(\frac{k}{n}\bigg)x^k(1-x)^{n-k}.&amp;fg=000000$</p>
+     These are called <b>Bernstein polynomials</b>. Observe that <p align="center">$latex \displaystyle \sum_{k=0}^{n}\binom{n}{k}x^k (1-x)^{n-k}=1&amp;fg=000000$</p>
+     and hence,<p align="center">$latex \displaystyle f(x)-p_n(x)=\sum_{k=0}^{n}\binom{n}{k} \bigg(f(x)-f\bigg(\frac{k}{n}\bigg)\bigg)x^k (1-x)^{n-k}.&amp;fg=000000$</p>
+     Our claim is there for any $latex {\epsilon&gt;0}&amp;fg=000000$ there exist $latex {N}&amp;fg=000000$ so that $latex {|f(x)-p_n(x)|&lt;\epsilon}&amp;fg=000000$ for all $latex {x \in [0,1]}&amp;fg=000000$ and $latex {n\geq N}&amp;fg=000000$.
+    <p>
+    If $latex {|f(x)-f(\frac{k}{n})|&lt;\epsilon}&amp;fg=000000$ for all k then the sum will be bounded by $latex {\epsilon \sum_{k=0}^{n}\binom{n}{k} x^k(1-x)^{n-k}=\epsilon}&amp;fg=000000$. But $latex {|f(x)-f(\frac{k}{n})|&lt;\epsilon}&amp;fg=000000$ need not be true for all $latex {\frac{k}{n}}&amp;fg=000000$ but certainly for those k, for which $latex {|x-\frac{k}{n}|&lt;\delta}&amp;fg=000000$ where $latex {\epsilon}&amp;fg=000000$ and $latex {\delta}&amp;fg=000000$ are related via the definition of uniform continuity, i.e., given $latex {\epsilon&gt;0}&amp;fg=000000$ choose $latex {\delta}&amp;fg=000000$ such that $latex {|f(x)-f(y)|&lt;\epsilon}&amp;fg=000000$ whenever $latex {|x-y|&lt;\delta}&amp;fg=000000$. This suggest that we split the sum into two parts: Let $latex {I=\{k:0\leq k\leq n,|x-\frac{k}{n}|&lt;\delta \}}&amp;fg=000000$, $latex {J=\{0,1,\dots,n\}-I}&amp;fg=000000$. </p><p align="center">$latex \displaystyle |f(x)-p_n(x)|\leq |\sum_{k\in I} \binom{n}{k}\bigg(f(x)-f\bigg(\frac{k}{n}\bigg)\bigg)x^k(1-x)^{n-k}|+|\sum_{k\in J}\binom{n}{k}\bigg(f(x)-f\bigg(\frac{k}{n}\bigg)\bigg)x^k(1-x)^{n-k}|.&amp;fg=000000$</p>
+    
+    <p>
+    Observe that, </p><p align="center">$latex \displaystyle |\sum_{k\in I} \binom{n}{k}\bigg(f(x)-f\bigg(\frac{k}{n}\bigg)\bigg)x^k(1-x)^{n-k}|\leq \epsilon\sum_{k=0}^{n}\binom{n}{k}x^k (1-x)^{n-k}=\epsilon .&amp;fg=000000$</p>
+     And the other part of inequality <p align="center">$latex \displaystyle |\sum_{k\in J}\binom{n}{k}\bigg(f(x)-f\bigg(\frac{k}{n}\bigg)\bigg)x^k(1-x)^{n-k}&amp;fg=000000$</p>
+     <p align="center">$latex \displaystyle \leq 2 ||f|| \sum_{|x-\frac{k}{n}&gt;\delta}\binom{n}{k}x^k(1-x)^{n-k}&amp;fg=000000$</p>
+    <p align="center">$latex \displaystyle  \leq \frac{2}{\delta^{2}} ||f|| \sum_{k=0}^{n}(x-\frac{k}{n})^2 \binom{n}{k}x^k (1-x)^{n-k}. &amp;fg=000000$</p>
+    
+    <p>
+    </p><p align="center">$latex \displaystyle \sum_{k=0}^{n}(\frac{k}{n}-x)^{2}\binom{n}{k}x^k(1-x)^{n-k}\leq \frac{x(1-x)}{n}\leq \frac{1}{4n}.&amp;fg=000000$</p>
+     Thus, <p align="center">$latex \displaystyle |f(x)-p_n(x)|\leq \epsilon+\frac{2 ||f||}{\delta^2 4n}&lt;2\epsilon&amp;fg=000000$</p>
+     if n is so large(independent of x). Hence $latex {||f-p_n||&lt;2\epsilon}&amp;fg=000000$ for n large.
+    <p>
+    The following lemma establishes the required inequality for proving the result. $latex \Box&amp;fg=000000$
+    
+     
+    </p><blockquote><b>Lemma 11</b> <em> <p align="center">$latex \displaystyle \sum_{k=0}^{n}(k-nx)^{2}\binom{n}{k}x^k(1-x)^{n-k}=nx(1-x)&amp;fg=000000$</p>
+     </em></blockquote>
+    
+    <p>
+    
+     <em>Proof:</em>  We prove by brute force calculation: </p><p align="center">$latex \displaystyle \sum_{k=0}^{n}(k-nx)^{2}\binom{n}{k}x^k(1-x)^{n-k}=\sum_{k=0}^{n}k^{2}\binom{n}{k}x^k(1-x)^{n-k}-2nx \sum_{k=0}^{n}\binom{n}{k} k x^k(1-x)^{n-k}+\sum_{k=0}^{n} n^2 x^2\binom{n}{k}x^k(1-x)^{n-k}&amp;fg=000000$</p>
+     The last sum is of course $latex {n^2x^2}&amp;fg=000000$. The second one equals, as <p align="center">$latex \displaystyle k\binom{n}{k}=\frac{kn!}{k!(n-1)!}=\frac{n(n-1)!}{(k-1)!(n-1-(k-1))!}, &amp;fg=000000$</p>
+     <p align="center">$latex \displaystyle n \sum_{k=1}^{n}\binom{n-1}{k-1}x^k (1-x)^{n-1-(k-1))}=nx \sum_{k=0}^{n}\binom{n-1}{k}x^k (1-x)^{n-1-k} =nx&amp;fg=000000$</p>
+     The first sum is obtained similarly by writing $latex {k^2=k(k-1)+k}&amp;fg=000000$ and proceeding as above gives us $latex {n(n-1)x^2+nx}&amp;fg=000000$.
+    <p>
+    Hence, </p><p align="center">$latex \displaystyle \sum_{k=0}^{n}(k-nx)^{2}\binom{n}{k}x^k(1-x)^{n-k}=n(n-1)x^2+nx-2n^2x^2+n^2x^2=nx(1-x)&amp;fg=000000$</p>
+     $latex \Box&amp;fg=000000$
+    
+    
+    <p>
+    We now introduce the space $latex {C(\mathbb{R})}&amp;fg=000000$. We say that the space $latex {f \in C(\mathbb{R})}&amp;fg=000000$ if $latex {f \in C[a,b]}&amp;fg=000000$ for $latex {a&lt;b}&amp;fg=000000$. That is f can be approximated by a sequence of polynomials (in the uniform norm) over any [a,b]. The sequence may be different for different intervals.
+    </p><p>
+    In view of the Weierstrass approximation theorem $latex {f\in C(\mathbb{R})}&amp;fg=000000$ iff $latex {f}&amp;fg=000000$ is uniformly continuous over closed and bounded interval. If $latex {x \in \mathbb{R}}&amp;fg=000000$ and if we fix an interval [a,b] containing x then we know: given $latex {\epsilon&gt;0}&amp;fg=000000$ there exist $latex {\delta &gt;0 }&amp;fg=000000$ such that $latex {|f(x)-f(y)|&lt;\epsilon }&amp;fg=000000$ for all $latex {|x-y|&lt;\delta}&amp;fg=000000$. As x changes, the $latex {\delta }&amp;fg=000000$ also changes; it can be chosen independent of x. This leads us yo define continuity of a function at point:
+    </p><p>
+    "If given any $latex {\epsilon&gt;0}&amp;fg=000000$ there exist $latex {\delta &gt;0}&amp;fg=000000$ depending on $latex {x}&amp;fg=000000$ and($latex {\epsilon}&amp;fg=000000$) such that $latex {|f(x)-f(y)|&lt;\epsilon}&amp;fg=000000$ for all $latex {y}&amp;fg=000000$ with $latex {|y-x|&lt;\delta}&amp;fg=000000$"
+    </p><p>
+    Elements of $latex {C(\mathbb R)}&amp;fg=000000$ are called continuous function. Similar notation is used to mean continuous function defined on a subset of $latex {\mathbb{R}}&amp;fg=000000$.
+    </p><p>
+    
+    </p><blockquote><b>Theorem 12</b> <em> If $latex {K\subset \mathbb{R}}&amp;fg=000000$ is compact then every $latex {f\in C(k)}&amp;fg=000000$ is uniformly continuous. </em></blockquote>
+    
+    <p>
+    
+     <em>Proof:</em>  The proof for will be provided in the next section. $latex \Box&amp;fg=000000$
+    
+    
+    </p><p>
+    We make the following observation: $latex {C([a,b])}&amp;fg=000000$ is an algebra, $latex {[a,b]}&amp;fg=000000$ is a vector space over $latex {\mathbb{C}}&amp;fg=000000$($latex {\mathbb{R}}&amp;fg=000000$) and $latex {fg\in C([a,b])}&amp;fg=000000$ whenever $latex {f, g \in C([a,b])}&amp;fg=000000$.Here, $latex {fg}&amp;fg=000000$ is defined by $latex {(fg)(x)=f(x)g(x)}&amp;fg=000000$. The polynomial space $latex {\mathcal{P}[a,b]}&amp;fg=000000$ is a subalgebra of $latex {C([a,b])}&amp;fg=000000$ and $latex {\mathcal{P}[a,b]}&amp;fg=000000$ is dense in $latex {C([a,b])}&amp;fg=000000$. 
+    </p><p>
+    Stone made an observation that two important properties are needed for proof of Weierstrass approximation theorem: (i) $latex {\mathcal{P}[a,b]}&amp;fg=000000$ separates points in the sense that given $latex {x,y \in [a,b]}&amp;fg=000000$, $latex {x\neq y}&amp;fg=000000$, there is a $latex {p\in \mathcal{P}([a,b])}&amp;fg=000000$ such that $latex {p(x)\neq p(y)}&amp;fg=000000$. (ii)The constant function $latex {f(x)\equiv 1}&amp;fg=000000$ belongs to $latex {\mathcal{P}([a,b])}&amp;fg=000000$.
+    </p><p>
+    The following theorem is a generalisation of Weierstrass approximation theorem to compact subspaces of $latex {\mathbb{R}}&amp;fg=000000$.
+    </p><p>
+    
+    </p><blockquote><b>Theorem 13 (Stone-Weierstrass Theorem)</b> <em> Let $latex {K}&amp;fg=000000$ be a compact metric space. Let $latex {B}&amp;fg=000000$ be any subalgebra of $latex {C(K)}&amp;fg=000000$ which satisfies:
+    <p>
+    (i) $latex {B}&amp;fg=000000$ separates points, i.e., given $latex {x,y\in K }&amp;fg=000000$, $latex {x\neq y}&amp;fg=000000$, there is $latex {f\in B}&amp;fg=000000$ such that $latex {f(x)\neq f(y)}&amp;fg=000000$.
+    </p><p>
+    (ii) $latex {B}&amp;fg=000000$ contains a non zero constant function.
+    </p></em><p><em>
+    Then $latex {B}&amp;fg=000000$ is dense in $latex {C(K)}&amp;fg=000000$, i.e., every $latex {f\in C(K)}&amp;fg=000000$ an be approximated by members of $latex {B}&amp;fg=000000$ in the uniform norm (over K). </em></p></blockquote>
+    
+    <p>
+    
+    
+    </p><p>
+    The proof proceeds in several steps. As $latex {B\subset C(K)}&amp;fg=000000$, $latex {f\in B}&amp;fg=000000$ implies $latex {|f|\in C(K)}&amp;fg=000000$, but $latex {|f|}&amp;fg=000000$ need not be in $latex {B}&amp;fg=000000$ itself. First, we show that $latex {|f|}&amp;fg=000000$ can be approximated by elements of $latex {B}&amp;fg=000000$. To this end we apply Weierstrass approximation theorem to the function $latex {g(t)=|t|}&amp;fg=000000$ on the interval $latex {[-||f||,||f||]}&amp;fg=000000$, where $latex {||f||=\sup_{x\in K} |f(x)|}&amp;fg=000000$. We know that there is a sequence of polynomials $latex {q_n(t)}&amp;fg=000000$ such that $latex {q_n \rightarrow g}&amp;fg=000000$ uniformly over $latex {[-||f||,||f||]}&amp;fg=000000$. As $latex {g(0)=0}&amp;fg=000000$, the sequence $latex {p_n}&amp;fg=000000$ defined by $latex {P_n(t)=q_n(t)-q_n(0)}&amp;fg=000000$ also converges to $latex {g}&amp;fg=000000$. Note that $latex {p_n(o)=0}&amp;fg=000000$ for all n. Given $latex {\epsilon &gt;0}&amp;fg=000000$ we can choose $latex {p_n}&amp;fg=000000$ such that $latex {|g(t)-p_n(t)|&lt;\epsilon }&amp;fg=000000$ for all $latex {t\in [-||f||,||f||}&amp;fg=000000$, so that for all $latex {x\in K}&amp;fg=000000$, $latex {||f(x)|-p_n(f(x))|&lt;\epsilon}&amp;fg=000000$. If $latex {p_n(t)=\sum_{j=1}^{m}a_jt^j}&amp;fg=000000$, $latex {p_n(f(x))=\sum_{j=1}^m a_j(f(x))^j}&amp;fg=000000$ is an element of the algebra $latex {B}&amp;fg=000000$. Thus,$latex { |f|}&amp;fg=000000$ is approximated by elements of $latex {B}&amp;fg=000000$.
+    </p><p>
+    We define $latex {f\lor }&amp;fg=000000$ and $latex {f\land g}&amp;fg=000000$ by</p><p align="center">$latex \displaystyle (f\lor g )(x)=\max\{f(x),g(x)\}&amp;fg=000000$</p>
+     <p align="center">$latex \displaystyle (f\land g)(x)=\min\{f(x),g(x)\}.&amp;fg=000000$</p>
+    
+    <p>
+    Observe that $latex {f\lor g}&amp;fg=000000$ and $latex {f\land g}&amp;fg=000000$ are both in $latex {B}&amp;fg=000000$ because of the following relation</p><p align="center">$latex \displaystyle (f\lor g)(x)=\frac{1}{2}((f+g)+|f-g|)(x)&amp;fg=000000$</p>
+     <p align="center">$latex \displaystyle (f\land g)(x)=\frac{1}{2}((f+g)-|f-g|)(x).&amp;fg=000000$</p>
+    
+    <p>
+    The same is true if we consider $latex {f_1 \lor f_2 \lor f_3\dots \lor f_n}&amp;fg=000000$ and $latex {f_1\land f_2\land \dots \land f_n}&amp;fg=000000$ for any finite number of functions $latex {f_j \in B }&amp;fg=000000$.
+    </p><p>
+    We know prove the theorem in the following way. Given $latex {f\in C(K,\mathbb{R})}&amp;fg=000000$ and $latex {\epsilon&gt;0}&amp;fg=000000$ we show that we can find a function $latex {g}&amp;fg=000000$ such that $latex {||f-g||&lt;\epsilon}&amp;fg=000000$. We then show that this $latex {g}&amp;fg=000000$ is approximated by elements of $latex {B}&amp;fg=000000$, proving the theorem.
+    </p><p>
+    <em>Proof:</em>  Let $latex {x,y\in K}&amp;fg=000000$, $latex {x\neq y}&amp;fg=000000$. We claim there exists $latex {g\in B}&amp;fg=000000$ such that $latex {g(x)=f(x)}&amp;fg=000000$, $latex {g(y)=f(y)}&amp;fg=000000$, that is to say $latex {g}&amp;fg=000000$ agrees with $latex {f}&amp;fg=000000$ at points $latex {x}&amp;fg=000000$ and $latex {y}&amp;fg=000000$. Since, $latex {x\neq y}&amp;fg=000000$ and $latex {B}&amp;fg=000000$ separates points there exists $latex {h\in B}&amp;fg=000000$ such that $latex {h(x)\neq h(y)}&amp;fg=000000$. Consider</p><p align="center">$latex \displaystyle g(t)=f(x)\frac{h(t)-h(y)}{h(x)-h(y)}+\frac{h(t)-h(x)}{h(y)-h(x).}&amp;fg=000000$</p>
+     Then clearly, $latex {g(x)=f(x)}&amp;fg=000000$, $latex {g(y)=f(y)}&amp;fg=000000$ and $latex {g\in B}&amp;fg=000000$ (as B is an algebra and B contains the constant functions).
+    <p>
+    Let us fix $latex {x}&amp;fg=000000$ in $latex {K}&amp;fg=000000$ and $latex {y \in K}&amp;fg=000000$ be different from $latex {x}&amp;fg=000000$. Let $latex {f_y}&amp;fg=000000$ be the function constructed above, that is, $latex {f_y\in B}&amp;fg=000000$, $latex {f_y(x)=f(x)}&amp;fg=000000$ and $latex {f_y(y)=f(y)}&amp;fg=000000$. Consider </p><p align="center">$latex \displaystyle G_y=\{ t\in K:f_y(t)&lt;f(t)+\epsilon \}.&amp;fg=000000$</p>
+     Since, $latex {f_y }&amp;fg=000000$ and $latex {f}&amp;fg=000000$ are continuous $latex { G_y }&amp;fg=000000$ is open. Further, $latex {x,y \in G_y}&amp;fg=000000$ and so $latex {\{G_y : y\in K, y\neq x\}}&amp;fg=000000$ is an open cover of K; which has a finite subcover say $latex {G_{y_1} G_{y_2} \dots G_{y_n}}&amp;fg=000000$. Let $latex {f_1, f_2, \dots f_n }&amp;fg=000000$ be the corresponding functions. Define <p align="center">$latex \displaystyle g_x=f_1 \land f_2 \dots \land f_n.&amp;fg=000000$</p>
+     Then $latex {g_x(x)=f(x)}&amp;fg=000000$ and $latex {g_x(t)&lt;f(t)+\epsilon}&amp;fg=000000$ for all $latex {t\in K}&amp;fg=000000$.
+    <p>
+    Next, consider the open sets </p><p align="center">$latex \displaystyle H_x=\{t\in K: g_x(t)&gt;f(t)-\epsilon \}&amp;fg=000000$</p>
+     As $latex {x\in H_x}&amp;fg=000000$, $latex {\{H_x: x\in K \}}&amp;fg=000000$ is an open cover of $latex {K}&amp;fg=000000$ which has a finite subcover $latex {H_{x_1}, H_{x_2},\dots H_{x_m}}&amp;fg=000000$. Let $latex {g_1, g_2 \dots g_m}&amp;fg=000000$ be the corresponding functions and define $latex {g=g_1 \lor g_2 \lor \dots \lor g_m}&amp;fg=000000$. Then clearly $latex {f(t)-\epsilon &lt;g(t)&lt;f(t)+\epsilon }&amp;fg=000000$ for all $latex {t\in K}&amp;fg=000000$, i.e., $latex {||g-f||&lt;\epsilon }&amp;fg=000000$.
+    <p>
+    Finally, as $latex {f_1,f_2, \dots f_n \in B}&amp;fg=000000$, the functions $latex {g_x}&amp;fg=000000$ can be approximated by elements of $latex {B}&amp;fg=000000$. Consequently, $latex {g_1 \lor g_2 \lor \dots \lor g_m =g}&amp;fg=000000$ can be approximated by members of B. As g approximates f, we are done. $latex \Box&amp;fg=000000$
+    
+    
+    
+    </p><p>
+    
+    <b>6. Miscellaneous </b>
+    
+    </p><p>
+    
+     The section contains concepts related to previous sections and solutions to questions put forward by the guide during the course of project.
+    </p><p>
+
+    <i>1. A closed and bounded subset of arbitrary metric space need not be complete.</i>
+    </p><p>
+
+    <i>Solution:</i> Observe that the in euclidean spaces, a closed and bounded set is compact, which implies its complete but in arbitrary metric spaces its not true; i.e., justified by the following example. Let $latex {(\mathbb{R},d)}&amp;fg=000000$ is metric space with usual metric and consider its subspace $latex {(\mathbb{Q},d)}&amp;fg=000000$. Now, consider the set $latex {A= (-\sqrt2,\sqrt2)\cap \mathbb{Q}}&amp;fg=000000$. Hence, A is open but also observe that A is closed $latex {A=[-\sqrt{2},\sqrt{2}]\cap \mathbb{Q}}&amp;fg=000000$ but the sequence $latex {1 / 1 ,3 / 2 ,7 / 5 ,17 / 12 ,41 / 29 ,99 / 70 ,239 / 169 ,577 / 408 \dots }&amp;fg=000000$, that is</p><p align="center">$latex \displaystyle a_n=\frac{\{10^n\sqrt{2}\}}{10^n}&amp;fg=000000$</p>
+     converges to $latex {\sqrt{2}}&amp;fg=000000$ ($latex {\{x\}}&amp;fg=000000$ is the floor function). Hence, $latex {A}&amp;fg=000000$ is not complete as there is Cauchy sequence which doesn't converge to $latex {\sqrt{2}}&amp;fg=000000$.
+    <p>
+
+    <i>2. A closed subspace of a complete metric space is complete</i> <em>Proof:</em>  Let $latex {Y\subset X}&amp;fg=000000$ be closed subspace of complete metric space $latex {X}&amp;fg=000000$ and let $latex {(x_n)}&amp;fg=000000$ be a Cauchy sequence in $latex {Y}&amp;fg=000000$ and also $latex {\overline{Y} =Y}&amp;fg=000000$. Now, $latex {(x_n)}&amp;fg=000000$ is Cauchy sequence in $latex {Y}&amp;fg=000000$, which is naturally Cauchy in $latex {X}&amp;fg=000000$. Since, $latex {X}&amp;fg=000000$ is complete $latex {x_n \rightarrow x}&amp;fg=000000$ for some $latex {x\in X}&amp;fg=000000$. Hence, $latex {x}&amp;fg=000000$ is a limit point of the sequence $latex {(x_n)}&amp;fg=000000$ and $latex {Y}&amp;fg=000000$ is closed; therefore $latex {x\in Y}&amp;fg=000000$,but since point of convergence is unique (all metric spaces are Hausdorff). Hence, the sequence $latex {(x_n)}&amp;fg=000000$ converges in $latex {Y}&amp;fg=000000$. $latex \Box&amp;fg=000000$
+    
+    
+    </p><p>
+
+    <i>3. Homeomorphisms don't preserve completeness.</i> <em>Proof:</em>  Let $latex {(\mathbb{R},d)}&amp;fg=000000$ be a complete metric space and $latex {((0,1),d)}&amp;fg=000000$ be metric space. Let $latex {f}&amp;fg=000000$ be homeomorphism from $latex {\mathbb{R}}&amp;fg=000000$ to $latex {(0,1)}&amp;fg=000000$. We define </p><p align="center">$latex \displaystyle f(x)=\frac{1}{1+2^{-x}}&amp;fg=000000$</p>
+     Since, f is differentiable its continuous. Also, note that its injective as $latex {x\neq y,x,y\in \mathbb{R}}&amp;fg=000000$, then $latex {f(x)\neq f(y)}&amp;fg=000000$ and also surjective as for any point in $latex {(0,1)}&amp;fg=000000$, there is point in $latex {\mathbb{R}}&amp;fg=000000$ of the form $latex {\frac{\log y-\log(1-y)}{\log 2}}&amp;fg=000000$. Its inverse is given by <p align="center">$latex \displaystyle f^{-1}(x)=\frac{\log (\frac{y}{1-y})}{\log 2}.&amp;fg=000000$</p>
+     And the inverse is well defined and differentiable on $latex {(0,1)}&amp;fg=000000$ clearly. Hence, $latex {\mathbb{R}}&amp;fg=000000$ is complete but $latex {(0,1)}&amp;fg=000000$ is not complete. $latex \Box&amp;fg=000000$
+    
+    
+    <p>
+
+    <i>4. If a sequence of polynomials converge uniformly over $latex {\mathbb{R}}&amp;fg=000000$ then the limit of convergence must be a polynomial.</i>
+    </p><p>
+    <em>Proof:</em>  Let $latex {(p_n)}&amp;fg=000000$ be a sequence of polynomials converging uniformly to $latex {f}&amp;fg=000000$ over $latex {\mathbb{R}}&amp;fg=000000$. Since, the convergence is uniform the sequence is uniformly Cauchy. For every $latex {\epsilon &gt;0}&amp;fg=000000$ there exist $latex {N_{\epsilon} \in \mathbb{N}}&amp;fg=000000$ such that $latex {d(p_n,p_m)&lt;\epsilon }&amp;fg=000000$, $latex {n,m\geq N_{\epsilon}}&amp;fg=000000$. (d is the same metric defined in section 4). Observe that </p><p align="center">$latex \displaystyle |p_n-p_m|\leq d(p_n,p_m) &lt;\epsilon &amp;fg=000000$</p>
+     where the difference is a polynomial. Now, consider the sequence of polynomials $latex {\{|p_n-p_m|\}_{n&gt;m}}&amp;fg=000000$, for a fixed $latex {m}&amp;fg=000000$, which is clearly uniformly bounded, but as we know that polynomial grow unbounded over $latex {\mathbb{R}}&amp;fg=000000$, therefore this difference must be constant. <p align="center">$latex \displaystyle p_n=p_m+k&amp;fg=000000$</p>
+     where $latex {k}&amp;fg=000000$ is some real number; now as $latex {n \rightarrow \infty }&amp;fg=000000$ this becomes $latex {f=p_m+k}&amp;fg=000000$, which is clearly a polynomial, our required result.
+    <p>
+    $latex \Box&amp;fg=000000$
+    
+    
+    </p><p>
+    
+    </p><blockquote><b>Theorem 14</b> <em> If $latex {K \subset \mathbb{R} }&amp;fg=000000$ is compact then every $latex {f \in C(k) }&amp;fg=000000$ is uniformly continuous. </em></blockquote>
+    
+    <p>
+    
+    
+    </p><p>
+    <em>Proof:</em>  If f is not uniformly continuous on I, there exists $latex {\epsilon &gt;0}&amp;fg=000000$ such that for every $latex { \delta &gt; 0}&amp;fg=000000$ there exists s and t in $latex { I }&amp;fg=000000$ with $latex {|s-t|&lt; \delta }&amp;fg=000000$ but $latex {|f(s)-f(t)| \geq \epsilon }&amp;fg=000000$. In particular, for each $latex {n \in \mathbb{N} }&amp;fg=000000$ there exists $latex { s_n }&amp;fg=000000$ and $latex { t_n }&amp;fg=000000$ in I such that $latex {|s_n - t_n|&lt; \frac{1}{n} }&amp;fg=000000$ and $latex {|f(s_n) -f(t_n)| \geq \epsilon }&amp;fg=000000$. According to the Bolzano - Weierstrass theorem there exists a convergent subsequence $latex {(s_{n_k})}&amp;fg=000000$ of $latex {(s_n)}&amp;fg=000000$.Then s = lim $latex {s_{n_k} \in I }&amp;fg=000000$, since I is a closed interval. Since $latex {|t_{n_k}-s_{n_k}| &lt; \frac{1}{n_k} }&amp;fg=000000$. f(s)= $latex {lim f(s_{n_k}) }&amp;fg=000000$, but this contradicts $latex {|f(s_{n_k})-f(t_{n_k})| \geq \epsilon }&amp;fg=000000$. Thus the hypothesis that f is not uniformly continuous is untenable. $latex \Box&amp;fg=000000$
+    
+    </p><p>
+    
+    </p><blockquote><b>Theorem 15 (Heine-Borel Theorem)</b> <em> If a set is closed and bounded in $latex {\mathbb{R}^{n}}&amp;fg=000000$ then its compact.
+    </em><p><em>
+    </em></p></blockquote>
+    
+    <p>
+    
+     There are different proofs of the Heine-Borel theorem but all require the completeness of euclidean spaces, we observed that the among following equivalent statements, always one of them is need to prove the theorem; which are necessarily equivalent statements of completeness for $latex {\mathbb{R}^n}&amp;fg=000000$. They are as follows:
+    </p><p>
+    (1) Every sequence of closed, nested intervals has a non-empty intersection.
+    </p><p>
+    (2) Every set which is bounded above has a least upperbound.(similarly for bounded below set)
+    </p><p>
+    (3) Every Cauchy sequence converges.
+    </p><p>
+    (4) Every monotone bounded sequence converges.
+    </p><p>
+    (5) Every infinite bounded subset has a limit point. (Bolzano-Weierstrass property)
+    </p><p>
+    The early proofs given by Borel, Peirre Cousin, Arthur Schoenflies, and William Henry Young make use of completeness in terms of any one of the properties mentioned above. Therefore, the proofs differ by which property is chosen for characterisation of completeness.
+    </p><p>
+    
+    
+    </p><p>
+    
+    <b> References </b>
+    
+    </p><p>
+    
+     Dedekind, Richard, <i>Essays on the Theory of Numbers</i>, "Continuity and Irrational Numbers," Dover: New York, ISBN 0-486-21010-3.
+    </p><p>
+    <i> An Analysis of The First Proofs of Heine-Borel Theorem</i>, MAA, https://www.maa.org/press/periodicals/convergence/an-analysis-of-the-first-proofs-of-the-heine-borel-theorem-introduction
+    </p><p>
+    Real number. Encyclopedia of Mathematics.
+    http://www.encyclopediaofmath.org/index.php?title=Real_number&amp;oldid=30888}]
+    </p><p>
+    W. Rudin, "Principles of mathematical analysis" , McGraw-Hill (1976) pp. 17-21
+    </p><p>
+    Lecture Notes on Real Analysis, S. Thangavelu(Unpublished)
+    </p><p></p>

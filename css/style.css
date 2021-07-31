@@ -1,0 +1,119 @@
+/* Styling for basic */
+
+html body{
+    background-color: #2E52A6;
+    text-align: left;
+    font-family: "Nanum Gothic" serif; 
+    font-size: 18px;
+    margin: 0px;
+    padding: auto;
+
+}
+
+li{
+    color:rgb(28, 36, 28);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+
+li a{
+  color: rgb(114, 8, 109);
+  font-size: 0.8em;
+}
+
+li a:hover{
+  color:rgb(60, 250, 43);
+  font-size: 0.9em;
+}
+h1{
+    color:rgb(27, 25, 39);
+}
+
+p{
+  color:rgb(11, 14, 14)
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+.column1 {
+    float:left;
+    /* width: 50%; */
+    padding: 1%;
+    width: 33%;
+    height: fit-content; 
+    background-color:rgb(240, 174, 51);
+    border: black;
+    border-width: thick;
+    border-style: groove;/* Should be removed. Only for demonstration */
+  }
+  
+.column2 {
+    float: right;
+    padding: 1%;
+    width: 33%;
+    height:auto; 
+    background-color:rgb(186, 255, 83);
+    border: black;
+    border-width: thick;
+    border-style: groove;
+  }
+
+  .grid-container {
+    display: inline-grid;
+  }
+
+.column3{
+  float: right;
+  padding: 1%;
+  width: 34%;
+  height:auto; 
+  background-color:rgb(79, 165, 245);
+  border: black;
+  border-width:thick;
+  border-style: groove;
+}
+
+.row1{
+  float:right;
+  align-self: center;
+  font-size: 0.5em;
+  padding: 1%;
+  width: 33%;
+  height:auto; 
+  background-color:rgb(245, 194, 26);
+  border: black;
+  border-width:thick;
+  border-style: groove;
+
+}
+  img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+  img{
+    display: block;
+    width: 50%;
+
+  }
+
+#remark{
+  font-size: 0.5em;
+  color: green;
+}
+.img-column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.img-row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.intro{
+  font-family: monospace;
+}
