@@ -9,13 +9,25 @@ html body{
     padding: auto;
 
 }
-
+.footer{
+  height: auto;
+  padding: 1%;
+  width: 33%;
+  background-color:rgb(154, 235, 190);
+  border:black;
+  border-width: thick;
+  border-style: groove;
+}
 li{
     color:rgb(28, 36, 28);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.9em;
 }
-
+.name{
+  font-size: 1.5em;
+  font-weight: bold;
+  
+}
 li a{
   color: rgb(114, 8, 109);
   font-size: 0.8em;
@@ -131,4 +143,7 @@ p{
 .quote{
   line-height: 0.8em;
   color:midnightblue;
+}
+.footer label{
+  margin: 5px;
 }
