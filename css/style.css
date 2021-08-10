@@ -11,10 +11,8 @@ html body{
 .footer{
   height: auto;
   padding: 1%;
-  width: 33%;
+  width: auto;
   border:black;
-  border-width: thick;
-  border-style: groove;
 }
 li{
     color:rgb(28, 36, 28);
@@ -49,6 +47,7 @@ p{
 @media (min-width: 992px) {
 .column1 {
     float:left;
+    background-repeat: round;
     padding: 1%;
     width: 33%;
     height: auto; 
