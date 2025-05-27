@@ -2,138 +2,303 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="ims/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum Gothic">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="manifest" href="contents/cf.html">
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    
-    <title>Sham S</title>
+    <title>Shamsundar Panchal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter and Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .sidebar {
+            transition: transform 0.3s ease;
+        }
+        .sidebar-hidden {
+            transform: translateX(-100%);
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .sidebar-open {
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
-<body style="background-image: url(ims/backgr/background_1.jpg)">
-        <div class="column1" style="background-image: url(ims/backgr/honeycomb_1.jpg);">
-            <h2 class="intro">Introduction</h2>
-            
-                <em class="intro">
-                    
-                    Hi! I'm Sham. I graduated with masters in mathematics
-                    and since then developed an keen interest in
-                    algorithms, machine learning which I'm still learning. I hope to work
-                    at the intersection of mathematics and computer science especially areas
-                    like automated theorem proving, computational group theory. I primarily code
-                    in Python. For more details here is my <a href="contents/ShamS.pdf">CV</a>.
-                </em>
-                <div class="footer" >
-                    <br>
-                    <p class="name">Sham S<br>
-                    </p>
-        
-                    <label for="email">
-                        <a href="mailto:panchalshamsundar8@gmail.com"><img src="ims/logos/email.png"width="32px" alt="email"></a>
-                    </label>
-        
-                    <label for="github">
-                    <a href="https://github.com/shamEiNew"><img src="ims/logos/GitHub-Mark-32px.png" alt="github-profile"></a>
-                    </label>
-                    <label for="wordpress">
-                        <a href="https://shamsundarpanchal.wordpress.com/"><img src="ims/logos/wordpress-circular-logo.png" width="32px" alt="wordpress"></a>
-                    </label>
-                    </label>
-                    <a href="https://www.hitwebcounter.com" target="_blank">
-                    <img src="https://hitwebcounter.com/counter/counter.php?page=7848881&style=0008&nbdigits=6&type=ip&initCount=0" title="Unique Vistor Counter" Alt="web counter"   border="0" /></a>           
-                </div> 
-                </div> 
-                
-            <div class="column2" style="background-image: url(ims/backgr/math_1.jpg);">
-                <h2>Contents</h2>
-                <p> <em>How many functions are not linearly separable given n inputs?</em></p>
-                <li class=math-content>Mathematics.</li>
-                <ul>
-                    <li><a href="https://shamsundarpanchal.wordpress.com/">Blog</a></li>
-                    <li><a href="https://share.streamlit.io/shameinew/pmath/streamlit-app/app.py">Continued Fractions using Eucids Algorithm.</a></li>
-                    <li><a href="https://share.streamlit.io/shameinew/pmath/streamlit-app/app.py">Primes using Eratosthenes Sieve.</a></li>
-                    <li><a href="https://share.streamlit.io/shameinew/pmath/streamlit-app/app.py">Playfair Cipher.</a></li>
-                    <li><a href="https://wp.ufpel.edu.br/zahn/files/2017/01/On-a-discontinuity-of-a-derivative.pdf">On discontinuity of derivative</a></li>
-                    <li class=math-content>Focusing on</li>
-                    <ul>
-                        <li><a href="http://www.cs.cornell.edu/courses/cs6860/2015fa/readings/kleene.pdf">Mathematical Logic: Stephen Kleene</a></li>
-                        <li><a href="https://www.csa.iisc.ac.in/~deepakd/logic-2021/">Logic and Theorem Proving</a></li>
-
-                    </ul>
-
-                </ul>
-                        <li class='data-analysis'> Machine Learning and Related</li>
-    
-                            <ul>
-                                <li><a href="contents/05_25.html">Numpy basics.</a></li>
-                                <li><a href="contents/logistic_regression.html">Logistic Regression</a></li>
-                                <li><a href="contents/torch_basics_1.html">Pytorch/Autograd Basics</a></li>
-                                <!-- <li><a href="https://share.streamlit.io/shameinew/streamlit-music/app.py">Music data from spotify.*</a></li> -->
-                                <li><a href="https://nn-apps.herokuapp.com/">Simple Digit Classifier</a></li>
-                                <li><a href="https://share.streamlit.io/shameinew/nn-apps/app.py#perceptron">Perceptron and MCP neuron</a></li>
-                        
-                        
-                                
-                        </ul>
-                <li class=useful-links>Some Links</li>
-                <ul>
-                    <li><a href="https://xkcd.com/">xkcd</a></li>
-                    <li><a href="https://pbfcomics.com/">pbf comics</a></li>
-                    <li><a href="http://fredrickey.info/hm/CalcNotes/CauchyWrgPr.pdf">Cauchy's Famous Wrong Proof</a></li>
-                    <li>
-                        <a href="https://mathoverflow.net/questions/35468/widely-accepted-mathematical-results-that-were-later-shown-to-be-wrong">Accepted Math Results Proven Wrong</a></li>
-                    <li><a href="https://terrytao.wordpress.com/career-advice/be-sceptical-of-your-own-work/">Terry Tao's Blog</a></li>
-                    <li><a href="https://mathoverflow.net/questions/15444/examples-of-eventual-counterexamples">Counter examples, eventually</a></li>
-                    <li><a href="https://mathoverflow.net/questions/23478/examples-of-common-false-beliefs-in-mathematics">Pitfalls and False Beliefs</a></li>
-                </ul>
-                
-                
-                <p id = 'remark'>* indicates it is still incomplete. </p>
-                </div>
-
-        <div class="column3" style="background-image: url(ims/backgr/trees_1.jpg);">
-            <h2>Highlights</h2>
-            <div class="img-row">
-            <div class = "img-column">
-                <a href="contents/logistic_regression.html"><img src="ims/logistic_reg.png" class="img-thumbnail" style="width:100%" alt="logistic regression"></a>
-                <img src="ims/golden_spiral.gif" class="img-thumbnail" style="width:100%" alt="golden_spiral">
-                <a href="https://share.streamlit.io/shameinew/streamlit-music/app.py">
-                    <img src="ims/prateek_kuhad.png" class="img-thumbnail" style="width:100%" alt="loudness image">
-                   </a>
-                <img src="ims/sequences.png" class="img-thumbnail" style="width:100%" alt="sequences">
-            </div>
-            <div class = "img-column">
-                <a href="contents/music_clean.html"><img src="ims/release_numbers.png" class="img-thumbnail" style="width:100%" alt="release year vs number of albums"></a>
-                <img src="ims/golden_spiral_grid.gif" class="img-thumbnail" style="width:100%" alt="golden spiral grid">
-                <a href="contents/dist_primes.html"><img src="ims/dist_primes.png" class="img-thumbnail" style="width:100%" alt="primes plot in (r, \theta)"></a>
-                <img src="ims/scatter_circles.gif" class="img-thumbnail" style="width:100%" alt="random animation of circles">
-                <a href="https://share.streamlit.io/shameinew/streamlit-music/app.py">
-                    <img src="ims/spotif_70s_00s.gif" class="img-thumbnail" style="width:100%" alt="loudness image">
-                   </a>
-                
-            </div>
-        </div>      
-            
+<body class="bg-gray-900 text-gray-100 transition-colors duration-300">
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-6 sidebar z-50 md:sidebar-open">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-xl font-bold">Shamsundar Panchal</h1>
+            <button id="sidebar-toggle" class="md:hidden text-cyan-400">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class=row-quote style="background-image: url(ims/backgr/math_1.jpg);">
-            <h2> Books</h2>
-           
-                <li>Books (Read or Reading)</li>
-                <ul>
-                    <li>The Prophet, Kahlil Gibran</li>
-                    <li>Broken Wings, Kahlil Gibran</li>
-                    <li>Brilliant Blunders. Mario Livio</li>
-                    <li>The Myth of Sisyphus, Albert Camus</li>
-                    <li>The Good Earth, Pearl S. Buck</li>
-                    <li>The Invisible Man, H.G. Wells</li>
-                    <li>Beyond Good and Evil, Friedrich Nietzsche</li>
-                    <li>Why I'm not a Christian, Bertrand Russell</li>
+        <ul class="space-y-4">
+            <li><a href="#home" class="hover:text-cyan-400">Home</a></li>
+            <li><a href="#summary" class="hover:text-cyan-400">Summary</a></li>
+            <li><a href="#skills" class="hover:text-cyan-400">Skills</a></li>
+            <li><a href="#experience" class="hover:text-cyan-400">Experience</a></li>
+            <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
+            <li><a href="#education" class="hover:text-cyan-400">Education</a></li>
+            <li><a href="#certifications" class="hover:text-cyan-400">Certifications</a></li>
+            <li><a href="#awards" class="hover:text-cyan-400">Awards</a></li>
+            <li>
+                <button id="theme-toggle" class="flex items-center text-cyan-400">
+                    <i class="fas fa-sun mr-2"></i> Toggle Theme
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <button id="sidebar-open" class="md:hidden fixed top-4 left-4 text-cyan-400 z-50">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="ml-0 md:ml-64 p-6 max-w-5xl mx-auto">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center parallax" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x1080/?tech');">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-cyan-400 mb-4">Shamsundar Panchal</h2>
+                <p class="text-lg text-gray-300">Data Scientist | Python Developer | Researcher</p>
+                <p class="text-gray-400 mt-2">
+                    Mumbai | Bangalore, India<br>
+                    <a href="mailto:panchalshamsundar7@gmail.com" class="text-cyan-400 hover:underline">panchalshamsundar7@gmail.com</a><br>
+                    <a href="https://github.com/shamEiNew" class="text-cyan-400 hover:underline" target="_blank">GitHub</a> | 
+                    <!-- <a href="#" class="text-cyan-400 hover:underline" target="_blank">Portfolio</a> |  -->
+                    <a href="https://shamsundarpanchal.wordpress.com/" class="text-cyan-400 hover:underline" target="_blank">Blog</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section id="summary" class="py-12">
+            <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold text-cyan-400 mb-4">Professional Summary</h2>
+                <p class="text-gray-300">
+                    Experienced Data Scientist, developer, and Researcher with expertise in NLP, machine learning, and Python development. Skilled in Python, SQL, and data analysis with a strong mathematical foundation. Proven track record of implementing ML/LLM based solutions that improve efficiency and accuracy across legal and real estate domains.
+                </p>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills" class="py-12">
+            <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold text-cyan-400 mb-4 cursor-pointer" onclick="toggleSection('skills-content')">Technical Skills</h2>
+                <div id="skills-content" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-100">Languages</h3>
+                        <p class="text-gray-300">Python, SQL, Octave, C, Lean (automated theorem prover), LaTeX</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-100">Packages & Libraries</h3>
+                        <p class="text-gray-300">LangChain, LLMs, HuggingFace, Streamlit, Seaborn, PyTorch, scikit-learn, Selenium</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-100">Developer Tools</h3>
+                        <p class="text-gray-300">VS Code, Pinecone VDB, GCP, Heroku, Postman</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-100">Technologies</h3>
+                        <p class="text-gray-300">Git, WordPress, Vector Databases</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience" class="py-12">
+            <h2 class="text-2xl font-bold text-cyan-400 mb-6">Professional Experience</h2>
+            <div class="space-y-6">
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100">Senior Researcher, Internet Brands, Bangalore, Karnataka</h3>
+                    <p class="text-gray-400">Dec 2024 - Present</p>
+                    <ul class="list-disc pl-5 text-gray-300">
+                        <li>Implemented advanced NLP techniques and LLMs to filter attorney databases, achieving 85% accuracy.</li>
+                        <li>Designed auto-scoring methodologies using scikit-learn and PyTorch.</li>
+                        <li>Developed Streamlit dashboards for data visualization.</li>
+                        <li>Led complex projects and coordinated with cross-functional teams.</li>
+                    </ul>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100">Senior Researcher, Thomson Reuters, Bangalore, Karnataka</h3>
+                    <p class="text-gray-400">Jan 2024 - Dec 2024</p>
+                    <ul class="list-disc pl-5 text-gray-300">
+                        <li>Pioneered NLP-based filtering system for attorney database management with 85% accuracy.</li>
+                        <li>Engineered data classification pipelines using Python and ML tools.</li>
+                        <li>Improved data processing efficiency by 30% through workflow innovations.</li>
+                    </ul>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100">Data Analyst, Square Yards, Andheri, Mumbai</h3>
+                    <p class="text-gray-400">July 2022 - Jan 2024</p>
+                    <ul class="list-disc pl-5 text-gray-300">
+                        <li>Developed web crawling techniques for real estate transaction data.</li>
+                        <li>Created ML models for real estate analytics portal.</li>
+                        <li>Built OCR tools, reducing manual data entry time by 40%.</li>
+                    </ul>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100">Python Developer - Analytics, Bay Leaf Digital, Remote</h3>
+                    <p class="text-gray-400">June 2022 - August 2022</p>
+                    <ul class="list-disc pl-5 text-gray-300">
+                        <li>Developed Root Cause Analysis methods for marketing analytics.</li>
+                        <li>Optimized PostgreSQL queries, reducing processing time by 35%.</li>
+                    </ul>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100">Quality Analyst, MRCC Solutions, Thane, MH, India</h3>
+                    <p class="text-gray-400">July 2019 - July 2022</p>
+                    <ul class="list-disc pl-5 text-gray-300">
+                        <li>Developed mathematical solutions for Pearson using MathXL.</li>
+                        <li>Automated testing processes using Selenium and Python, reducing testing time by 20%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-12">
+            <h2 class="text-2xl font-bold text-cyan-400 mb-6">Projects</h2>
+            <div class="space-y-6">
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100 cursor-pointer" onclick="toggleSection('project-2')">Neuro-Symbolic Math Solver</h3>
+                    <div id="project-2" class="hidden">
+                        <p class="text-gray-400">April 2025 - till date | Stack: Gemini 2.0 Flash API, Sympy, FastAPI, Flask</p>
+                        <p class="text-gray-300">Since LLMs are weak at logic and complex mathematical task. This project aims to build an LLM based problem solver/prover with symbolic validation from SymPy. This project is an continuous effort and includes roadmap to include theorem provers like lean or coq in future.</p>
+                        <p class="mt-2"><a href="#" class="text-cyan-400 hover:underline" target="_blank">Streamlit App</a> | <a href="#" class="text-cyan-400 hover:underline" target="_blank">GitHub</a></p>
+                    </div>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100 cursor-pointer" onclick="toggleSection('project-1')">Multi-lingual Context QnA ChatBot</h3>
+                    <div id="project-1" class="hidden">
+                        <p class="text-gray-400">Jan 2022 | Stack: Streamlit, Pincone VDB, GPT 3.5 API, Cohere Embedding</p>
+                        <p class="text-gray-300">Developed a contextual chatbot using Langchain, Pinecone Vector Database, and GPT-3.5. Integrated multi-lingual embeddings from HuggingFace.</p>
+                        <p><a href="https://shameinew-wiki-qa-app-streamlit-app-4kc3ka.streamlit.app/" class="text-cyan-400 hover:underline" target="_blank">Streamlit App</a> | <a href="https://github.com/shamEiNew/wiki-qa" class="text-cyan-400 hover:underline" target="_blank">GitHub</a></p>
+                    </div>
+                </div>
+                
+                <!-- <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100 cursor-pointer" onclick="toggleSection('project-3')">Movie Geolocations</h3>
+                    <div id="project-3" class="hidden">
+                        <p class="text-gray-400">May 2023</p>
+                        <p class="text-gray-300">Streamlit application mapping movie filming locations with interactive visualizations.</p>
+                        <p><a href="#" class="text-cyan-400 hover:underline" target="_blank">Streamlit App</a> | <a href="#" class="text-cyan-400 hover:underline" target="_blank">GitHub</a></p>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="py-12">
+            <h2 class="text-2xl font-bold text-cyan-400 mb-6">Education</h2>
+            <div class="space-y-6">
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100">Master of Science in Mathematics</h3>
+                    <p class="text-gray-400">University of Mumbai, Dept. of Mathematics, Mumbai, MH | Jun 2016 - Aug 2018</p>
+                    <p class="text-gray-300">Relevant coursework: Statistical Analysis, Numerical Methods, Linear Algebra, Optimization</p>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-medium text-gray-100">Bachelor of Science in Mathematics</h3>
+                    <p class="text-gray-400">University of Mumbai, SIES College, Mumbai, MH | Jun 2013 - May 2016</p>
+                    <p class="text-gray-300">Grade: 84/100 | College Award for highest marks in Mathematics</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="py-12">
+            <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold text-cyan-400 mb-4">Certifications</h2>
+                <ul class="list-disc pl-5 text-gray-300">
+                    <li>Machine Learning (Coursera-Stanford Online) - Andrew Ng: Octave, SVM, Regression, Deep Learning, Kernels, Bias-Variance</li>
+                    <li>Advanced SQL, EDA with Python (Datacamp)</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- Awards -->
+        <section id="awards" class="py-12">
+            <div class="card bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold text-cyan-400 mb-4">Awards and Fellowships</h2>
+                <ul class="list-disc pl-5 text-gray-300">
+                    <li>IASc Summer Research Fellow at IISER Thiruvananthapuram (April-June 2017): Project on "Completion of Metric Spaces and Real Numbers"</li>
+                    <li>Multiple academic awards at SIES College (2013-2018) for highest marks in Mathematics and Physics</li>
+                </ul>
+            </div>
+        </section>
     </div>
-                    
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p>© 2025 Shamsundar Panchal. All rights reserved.</p>
+            <div class="mt-4">
+                <!-- hitwebcounter Code START -->
+                <a href="https://www.hitwebcounter.com" target="_blank">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=20772865&style=0001&nbdigits=4&type=page&initCount=500" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Toggle section visibility
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('hidden');
+        }
+
+        // Sidebar toggle for mobile
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOpen = document.getElementById('sidebar-open');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        sidebarOpen.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-open');
+        });
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-open');
+        });
+
+        // Dark/light mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun mr-2"></i> Toggle Theme' : '<i class="fas fa-moon mr-2"></i> Toggle Theme';
+        });
+
+        // Parallax effect (basic simulation with scroll)
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.parallax');
+            sections.forEach(section => {
+                const speed = 0.5;
+                const yPos = -(window.pageYOffset * speed);
+                section.style.backgroundPositionY = `${yPos}px`;
+            });
+        });
+    </script>
 </body>
 </html>
